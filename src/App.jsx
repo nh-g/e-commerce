@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // Project files
 import Navigation from "./shared/Navigation";
-import HomePage from "./pages/homepage/Home";
+import HomePage from "./pages/home/Home";
 import './styles/style.sass'
 export default function App() {
   return (
