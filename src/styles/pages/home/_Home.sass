@@ -1,11 +1,11 @@
 @import ./_HomeProduct
 
-#hero 
-    display: flex
-    justify-content: center
-    margin-left: auto
-    margin-right: auto
-    max-width: 1500px
+// #hero 
+//     display: flex
+//     justify-content: center
+//     margin-left: auto
+//     margin-right: auto
+//     max-width: 1500px
 
 .hero__image
     width: 100%
@@ -17,9 +17,24 @@
 .spacer 
   height: 2rem
 
+.home 
+  display: flex
+  justify-content: center
+  margin-left: auto
+  margin-right: auto
+  max-width: 1500px
+
 .home__row 
   display: flex
   z-index: 1
   margin-left: 5px
   margin-right: 5px
+
+@media only screen and (max-width:500px)
+  .home__row 
+    display: grid
+
+    .hero__image
+      margin-bottom: -100px
+      width: 100%
 

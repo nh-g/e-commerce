@@ -9,9 +9,11 @@ export default function HomePage() {
   const homeRow_3 = homeProductData.slice(homeProductData.length-1);
 
   return (
+    <>
+    <Hero />
     <div className="home">
-      <Hero />
       <div className="spacer intro" />
+
       <div className="home__container">
 
         <div className="home__row">
@@ -26,5 +28,6 @@ export default function HomePage() {
         
       </div>
     </div>
+    </>
   );
 }

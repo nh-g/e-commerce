@@ -28,7 +28,8 @@ export default function NavigationBar() {
 
       <div className="right-items">
         <Link to="/menu">
-          Menu <img src={flameIcon} alt="" style={{ height: "10px" }} />
+          Menu 
+          <img src={flameIcon} alt="" style={{ height: "10px" }} />
         </Link>
 
         <div className="header__option">
