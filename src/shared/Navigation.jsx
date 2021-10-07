@@ -1,6 +1,7 @@
 // NPM Packages
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import { Link } from "react-router-dom";
 
 //Project files
 import flameIcon from "../assets/images/brand/flame.svg";
@@ -8,10 +9,13 @@ import flameIcon from "../assets/images/brand/flame.svg";
 export default function NavigationBar() {
   return (
     <nav id="navigation-bar">
-      <h1>
-        <img src={flameIcon} alt="" style={{ height: "30px" }} />
-        Fireup
-      </h1>
+      <Link exact to="/">
+        <h1>
+          <img src={flameIcon} alt="" style={{ height: "30px" }} />
+          Fireup
+        </h1>
+      </Link>
+
       <div className="flexbox-expand-space" />
 
       {/* <SearchBar /> */}
@@ -23,9 +27,10 @@ export default function NavigationBar() {
       <div className="flexbox-expand-space" />
 
       <div className="right-items">
-        <div>
+        <Link to="/menu">
           Menu <img src={flameIcon} alt="" style={{ height: "10px" }} />
-        </div>
+        </Link>
+
         <div className="header__option">
           <span className="header__optionLineOne">Hello Guest</span>
           <span className="header__optionLineTwo">Sign In</span>

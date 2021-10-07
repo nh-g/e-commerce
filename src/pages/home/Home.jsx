@@ -1,9 +1,7 @@
-import categoriesData from "./categories.json";
 import MappingList from "../../shared/MappingList.jsx";
 import homeProductData from "./homeProducts.json"; 
 import Hero from "./Hero.jsx";
 import HomeProduct from './HomeProduct'
-import CategoryMasonry from "./CategoryMasonry";
 
 export default function HomePage() {
   const homeRow_1 = homeProductData.slice(0,2);
