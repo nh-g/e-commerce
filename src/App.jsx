@@ -6,15 +6,14 @@ import Navigation from "./shared/Navigation";
 import HomePage from "./pages/home/Home";
 import './styles/style.sass'
 import Menu from "./pages/menu/Menu";
+import Footer from './shared/Footer'
 export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
-
         <Navigation />
-      
-        <Switch>
 
+        <Switch>
           <Route exact path="/">
             <HomePage />
           </Route>
@@ -22,9 +21,9 @@ export default function App() {
           <Route path="/menu">
             <Menu />
           </Route>
-
         </Switch>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
