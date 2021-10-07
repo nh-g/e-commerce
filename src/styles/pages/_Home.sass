@@ -8,5 +8,14 @@
 .hero__image
     width: 100%
     z-index: -1
-    margin-bottom: -150px
+    // margin-bottom: -150px
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
+
+/* Reverse column */
+.home .masonry:nth-child(even) > .right-content 
+  grid-column: 1
+  grid-row: 1
+
+.spacer 
+  height: 2rem
+

@@ -3,7 +3,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 //Project files
-import flameIcon from '../asset/images/brand/flame.svg';
+import flameIcon from "../assets/images/brand/flame.svg";
 
 export default function NavigationBar() {
   return (

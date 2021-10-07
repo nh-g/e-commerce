@@ -1,0 +1,26 @@
+[
+  {
+    "imagePath": "categoryMasonry/steak.jpg",
+    "title": "steak",
+    "link": "steak",
+    "description": "A perfect steak should have a crusty, crunchy, well-browned exterior surrounding a core of perfectly pink, juicy, tender meat that spans from edge to edge. A perfect steak should have a nice contrast between the smoky, almost charred exterior and the deeply beefy interior. A perfect steak should be chin-drippingly juicy and melt-in-your-mouth tender."
+  },
+  {
+    "imagePath": "categoryMasonry/sausage.jpg",
+    "title": "sausage",
+    "link": "sausage",
+    "description": "Making sausage is fun, but getting it on the grill is what I really enjoy. The best sausage needs to be grilled gently, as we want the temperature of the meat to rise gradually and the casings not to rupture. "
+  },
+  {
+    "imagePath": "categoryMasonry/chicken.jpg",
+    "title": "chicken",
+    "link": "chicken",
+    "description": "Say hello to your newest go-to summer staple, the best Grilled BBQ Chicken! Our recipe utilizes a quick BBQ chicken marinade, a flavorful BBQ chicken dry rub, & indirect grilling, yielding perfectly tender, juicy, & flavorful BBQ chicken every time. "
+  },
+  {
+    "imagePath": "categoryMasonry/veggies.jpg",
+    "title": "veggies",
+    "link": "veggies",
+    "description": "Whether it's delicious vegetarian or easy vegan recipes you're after, or ideas for gluten or dairy-free disheses, you'll find plenty here to inspire you."
+  }
+]
