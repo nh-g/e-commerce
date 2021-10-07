@@ -1,4 +1,5 @@
 import Navigation from "./component/Navigation";
+import HomePage from "./pages/homepage/Home";
 import './styles/style.sass'
 export default function App() {
   return (
@@ -6,6 +7,7 @@ export default function App() {
       {/* Header */}
       <Navigation/>
       {/* Home */}
+      <HomePage/>
     </div>
     
   );
