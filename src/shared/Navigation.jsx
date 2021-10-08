@@ -5,8 +5,11 @@ import { Link } from "react-router-dom";
 
 //Project files
 import flameIcon from "../assets/images/brand/flame.svg";
-
+import { useStateValue } from "../state/StateProvider";
 export default function NavigationBar() {
+  // Global state
+  const [{cart, user}, dispatch] = useStateValue();
+
   return (
     <nav id="navigation-bar">
       <Link exact to="/">
@@ -19,16 +22,14 @@ export default function NavigationBar() {
       <div className="flexbox-expand-space" />
 
       {/* <SearchBar /> */}
-      <div className="search">
-        <input className="searchInput" type="text" />
+      <div className="header__search">
+        <input className="header__searchInput" type="text" />
         <SearchIcon className="searchIcon" />
       </div>
 
-      <div className="flexbox-expand-space" />
-
-      <div className="right-items">
+      <div className="header__nav">
         <Link to="/menu">
-          Menu 
+          Menu
           <img src={flameIcon} alt="" style={{ height: "10px" }} />
         </Link>
 
@@ -38,7 +39,9 @@ export default function NavigationBar() {
         </div>
         <div className="header__optionBasket">
           <ShoppingBasketIcon />
-          <span className="header__optionLineTwo header__basketCount">0</span>
+          <span className="header__optionLineTwo header__basketCount">
+            {cart?.length}
+          </span>
         </div>
       </div>
     </nav>

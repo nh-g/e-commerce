@@ -1,7 +1,28 @@
+// Project files
 import ImageLoader from "../../shared/ImageLoader";
+import { useStateValue } from "../../state/StateProvider";
 
 export default function HomeProduct({ item }) {
-  const { title, imageURL, price, rating } = item;
+  // Properties
+  const { id, title, imageURL, price, rating } = item;
+
+  // Global State
+  const [{ cart }, dispatch] = useStateValue();
+
+  // Methods
+  const addToCart = () => {
+    // dispatch the item into the data layer
+    dispatch({
+      type: "ADD_TO_CART",
+      item: {
+        id: id,
+        title: title,
+        imageURL: imageURL,
+        price: price,
+        rating: rating,
+      },
+    });
+  };
 
   return (
     <div className="product">
@@ -22,7 +43,7 @@ export default function HomeProduct({ item }) {
 
       <ImageLoader filePath={imageURL} />
 
-      <span className="cta">Add to Cart</span>
+      <span className="cta" onClick={addToCart}>Add to Cart</span>
     </div>
   );
 }
