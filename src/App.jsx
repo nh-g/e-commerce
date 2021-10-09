@@ -45,17 +45,19 @@ export default function App() {
         <Navigation />
 
         <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
+          <div className="main">
+            <Route exact path="/">
+              <HomePage />
+            </Route>
 
-          <Route path="/menu">
-            <Menu />
-          </Route>
+            <Route path="/menu">
+              <Menu />
+            </Route>
 
-          <Route path="/login">
-            <Login />
-          </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+          </div>
         </Switch>
       </BrowserRouter>
       <Footer />
