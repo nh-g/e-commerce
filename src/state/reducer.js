@@ -4,12 +4,19 @@ export const initialState = {
 };
 
 export default function reducer (state, action){
-    switch(action.type){
-        case "ADD_TO_CART":
-            return addItem(state, action);
-        default:
-            return state;
+    switch (action.type) {
+      case "ADD_TO_CART":
+        return addItem(state, action);
+      case "SET_USER":
+        return setUser(state, action);
+      default:
+        return state;
     }
+}
+
+function setUser(state, action){
+  const {user} = action;
+  return {...state, user:user}
 }
 
 function addItem(state, action){

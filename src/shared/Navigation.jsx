@@ -2,13 +2,21 @@
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
+import { signOut } from "firebase/auth";
 
 //Project files
 import flameIcon from "../assets/images/brand/flame.svg";
 import { useStateValue } from "../state/StateProvider";
+import {authentication} from "../scripts/authentication-firebase";
+
 export default function NavigationBar() {
   // Global state
   const [{cart, user}, dispatch] = useStateValue();
+  const handleAuthentication = () => {
+
+    if (user) {signOut(authentication);}
+  };
+
 
   return (
     <nav id="navigation-bar">
@@ -33,16 +41,25 @@ export default function NavigationBar() {
           <img src={flameIcon} alt="" style={{ height: "10px" }} />
         </Link>
 
-        <div className="header__option">
-          <span className="header__optionLineOne">Hello Guest</span>
-          <span className="header__optionLineTwo">Sign In</span>
-        </div>
-        <div className="header__optionBasket">
-          <ShoppingBasketIcon />
-          <span className="header__optionLineTwo header__basketCount">
-            {cart?.length}
-          </span>
-        </div>
+        <Link to={!user && "/login"}>
+          <div onClick={handleAuthentication} className="header__option">
+            <span className="header__optionLineOne">
+              Hello {!user ? "Guest" : user.email}
+            </span>
+            <span className="header__optionLineTwo">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
+          </div>
+        </Link>
+
+        <Link to="/checkout">
+          <div className="header__optionBasket">
+            <ShoppingBasketIcon />
+            <span className="header__optionLineTwo header__basketCount">
+              {cart?.length}
+            </span>
+          </div>
+        </Link>
       </div>
     </nav>
   );

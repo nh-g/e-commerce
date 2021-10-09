@@ -1,7 +1,6 @@
 // NPM Packages
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore/lite";
-import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAfGq7M0B2NxNZLGhdfCi2WTGZacxUFcX8",
@@ -17,4 +16,3 @@ const firebaseApp = initializeApp(firebaseConfig);
 
 export const database = getFirestore(firebaseApp);
 
-export const authentication = getAuth();
