@@ -8,6 +8,7 @@ import {
 
 // Project files
 import { authentication } from "../../scripts/firebase/authentication-firebase";
+import flameIcon from "../../assets/images/brand/flame.svg";
 
 export default function Login() {
   const history = useHistory();
@@ -41,11 +42,11 @@ export default function Login() {
 
   return (
     <div className="login">
-      <Link to="/">
-        <img
-          className="login__logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
-        />
+      <Link exact to="/">
+        <h1 className="header__logo">
+          <img src={flameIcon} alt="" style={{ height: "30px" }} />
+          Fireup
+        </h1>
       </Link>
 
       <div className="login__container">
