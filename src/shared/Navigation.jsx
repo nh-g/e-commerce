@@ -7,16 +7,16 @@ import { signOut } from "firebase/auth";
 //Project files
 import flameIcon from "../assets/images/brand/flame.svg";
 import { useStateValue } from "../state/StateProvider";
-import {authentication} from "../scripts/authentication-firebase";
+import { authentication } from "../scripts/firebase/authentication-firebase";
 
 export default function NavigationBar() {
   // Global state
-  const [{cart, user}, dispatch] = useStateValue();
+  const [{ cart, user }, dispatch] = useStateValue();
   const handleAuthentication = () => {
-
-    if (user) {signOut(authentication);}
+    if (user) {
+      signOut(authentication);
+    }
   };
-
 
   return (
     <nav id="navigation-bar">

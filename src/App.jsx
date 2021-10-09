@@ -6,15 +6,15 @@ import { onAuthStateChanged } from "firebase/auth";
 // Project files
 import "./styles/style.sass";
 import { useStateValue } from "./state/StateProvider";
-import { authentication as auth } from "./scripts/authentication-firebase";
+import { authentication as auth } from "./scripts/firebase/authentication-firebase";
 import Navigation from "./shared/Navigation";
 import HomePage from "./pages/home/Home";
 import Menu from "./pages/menu/Menu";
 import Login from "./pages/login/Login";
-import Footer from './shared/Footer'
+import Footer from "./shared/Footer";
 export default function App() {
   // Global state
-  const [{},dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   useEffect(() => {
     // will only run once when the app component loads...
@@ -56,7 +56,6 @@ export default function App() {
           <Route path="/login">
             <Login />
           </Route>
-
         </Switch>
       </BrowserRouter>
       <Footer />

@@ -1,19 +1,21 @@
 // NPM Packages
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 // Project files
-import {authentication} from '../../scripts/authentication-firebase'
+import { authentication } from "../../scripts/firebase/authentication-firebase";
 
 export default function Login() {
-
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   //Methods
-  function signIn (e) {
+  function signIn(e) {
     e.preventDefault();
 
     signInWithEmailAndPassword(authentication, email, password)
@@ -22,9 +24,9 @@ export default function Login() {
         const user = userCredential.user;
       })
       .catch((error) => alert(error.message));
-  };
+  }
 
-  function signUp (e) {
+  function signUp(e) {
     e.preventDefault();
 
     createUserWithEmailAndPassword(authentication, email, password)
@@ -35,9 +37,7 @@ export default function Login() {
         }
       })
       .catch((error) => alert(error.message));
-  };
-
-
+  }
 
   return (
     <div className="login">
@@ -88,4 +88,3 @@ export default function Login() {
     </div>
   );
 }
-
