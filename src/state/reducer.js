@@ -5,7 +5,6 @@ export const initialState = {
 
 export default function reducer(state, action) {
   switch (action.type) {
-
     case "ADD_TO_CART":
       return addItem(state, action);
 
@@ -14,7 +13,7 @@ export default function reducer(state, action) {
 
     case "REMOVE_FROM_CART":
       return removeFromCart(state, action);
-      
+
     default:
       return state;
   }
@@ -34,13 +33,16 @@ export function getCartTotal(cart) {
   cart?.reduce((amount, item) => item.price + amount, 0);
 }
 
-function removeFromCart(state, action){
-  const index = state.cart.findIndex((cartItem) => cartItem.id === action.id);
+function removeFromCart(state, action) {
+  const index = state.cart.findIndex((item) => item.id === action.id);
+  let newCart = [...state.cart];
+  if (index >= 0) {
+    newCart.splice(index, 1);
+  } else {
+    console.warn(
+      `Cant remove product (id: ${action.id}) as its not in basket!`
+    );
+  }
 
-  let newCart = [state.cart];
-
-  if (index >= 0) newCart.splice(index, 1);
-  else alert(`Cant remove product (id: ${action.id}) as its not in Cart!`);
-
-  return {...state, cart: newCart}
+  return {...state, cart: newCart};
 }
