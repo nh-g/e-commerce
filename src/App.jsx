@@ -9,6 +9,7 @@ import Navigation from "./shared/Navigation";
 import HomePage from "./pages/home/Home";
 import Menu from "./pages/menu/Menu";
 import Login from "./pages/login/Login";
+import Checkout from "./pages/checkout/Checkout";
 import Footer from "./shared/Footer";
 import { useStateValue } from "./state/StateProvider";
 import { authentication as auth } from "./scripts/firebase/authentication-firebase";
@@ -58,7 +59,12 @@ export default function App() {
             <Route path="/login">
               <Login />
             </Route>
+
+            <Route path="/checkout">
+              <Checkout />
+            </Route>
           </div>
+
         </Switch>
       </BrowserRouter>
       <Footer />

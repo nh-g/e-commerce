@@ -36,14 +36,17 @@ export default function HomeProduct({ item }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>🔥</p>
+              // <p>⭐️ </p>
+              <p>★</p>
             ))}
         </div>
       </div>
 
       <ImageLoader filePath={imageURL} />
 
-      <span className="cta" onClick={addToCart}>Add to Cart</span>
+      <span className="cta" onClick={addToCart}>
+        Add to Cart
+      </span>
     </div>
   );
 }

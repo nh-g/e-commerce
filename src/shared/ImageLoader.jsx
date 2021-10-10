@@ -3,5 +3,5 @@ export default function ImageLoader({ filePath }) {
   const imageURL =
     require(`../assets/images/${fileFolder}/${fileName}`).default;
 
-  return <img alt={fileName} src={imageURL} />;
+  return <img className ="image" alt={fileName} src={imageURL} />;
 }
