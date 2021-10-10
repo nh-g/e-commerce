@@ -22,5 +22,12 @@
     "title": "veggies",
     "link": "veggies",
     "description": "Whether it's delicious vegetarian or easy vegan recipes you're after, or ideas for gluten or dairy-free disheses, you'll find plenty here to inspire you."
+  },
+  {
+    "imagePath": "categoryMasonry/beer.jpg",
+    "title": "beverage",
+    "link": "beverage",
+    "description": "Light, refreshing, big-batch BBQ drinks to make your next barbecue party fun and easy to serve. Featuring everything from gin cocktails to beer cocktails and even wine and champagne cocktails."
   }
+
 ]
