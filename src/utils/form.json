@@ -1,0 +1,84 @@
+{
+  "fullname": {
+    "settings": {
+      "type": "text",
+      "label": "Enter your full name",
+      "placeholder": "Clement Cardona",
+      "alert": "Please enter a valid name ( > 3 characters)",
+      "className": "input-name"
+    }
+  },
+  "email": {
+    "settings": {
+      "type": "email",
+      "label": "Enter your email",
+      "placeholder": "clecardona@gmail.com",
+      "alert": "Please enter a valid email",
+      "className": "input-email"
+    }
+  },
+  "date": {
+    "settings": {
+      "type": "date",
+      "label": "Enter a date",
+      "placeholder": "YYYY-MM-DD",
+      "alert": "Please enter a valid date (YYYY-MM-DD)",
+      "className": "input-date"
+    }
+  },
+  "time": {
+    "settings": {
+      "label": "Enter a time",
+      "type": "time",
+      "placeholder": "HH:MM",
+      "alert": "Please enter a valid time (HH:MM)",
+      "className": "input-time"
+    }
+  },
+  "title": {
+    "settings": {
+      "label": "",
+      "type": "text",
+      "placeholder": "Enter title",
+      "alert": "Please enter a valid name (> 3 chars) that does not exists already",
+      "className": "input-title"
+    }
+  },
+  "description": {
+    "settings": {
+      "label": "",
+      "type": "text",
+      "placeholder": "Enter description",
+      "alert": "Please enter a valid description (10-150 chars)",
+      "className": "input-description"
+    }
+  },
+  "imagePath": {
+    "settings": {
+      "label": "",
+      "type": "text",
+      "placeholder": "Enter imagePath",
+      "alert": "Please enter a valid imagePath (10-150 chars)",
+      "className": "input-imagePath"
+    }
+  },
+
+  "ingredients": {
+    "settings": {
+      "label": "",
+      "type": "text",
+      "placeholder": "Ingredient1 Ingredient2 ...   ",
+      "alert": "Please enter a valid ingredients (3-10 chars)",
+      "className": "input-ingredient"
+    }
+  },
+  "price": {
+    "settings": {
+      "label": "",
+      "type": "text",
+      "placeholder": "Enter price",
+      "alert": "Please enter a valid price > 0",
+      "className": "input-price"
+    }
+  }
+}
