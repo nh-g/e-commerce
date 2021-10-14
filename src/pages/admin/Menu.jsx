@@ -5,7 +5,7 @@ import { useState } from 'react';
 import useFetch from '../../hooks/useFetch';
 import CategoryMasonry from './CategoryMasonry';
 import MappingList from '../../shared/MappingList';
-import CreateCategory from '../admin/CreateCategory';
+import CreateCategory from './CreateCategory';
 
 export default function Menu() {
   // Hooks

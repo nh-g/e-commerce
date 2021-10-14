@@ -11,7 +11,7 @@ import firestoreReference from "../../scripts/firebase/firebase";
 import { createDocument } from "../../scripts/firebase/fireStore";
 import { uploadFile } from "../../scripts/firebase/cloudStorage";
 import dataURLToFile from "../../scripts/upload-image/dataURLToFile";
-import readImage from "../../scripts/upload-image/readImage";
+import readImage from "../../scripts/upload-image/read-image";
 import resizeImage from "../../scripts/upload-image/resizeImage";
 
 export default function CreateCategory({ categories, setToggler }) {
