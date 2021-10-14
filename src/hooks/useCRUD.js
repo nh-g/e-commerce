@@ -6,7 +6,7 @@ import firestoreReference from "../scripts/firebase/firebase";
 
 // Create a category using image URL
 export async function createCategoryURL(someCategory, someImageURL) {
-  const newCategory = { ...someCategory, imagePath: someImageURL };
+  const newCategory = { ...someCategory, imageURL: someImageURL };
   createDoc(firestoreReference, "categories", newCategory);
   alert(newCategory.title + " successfully added to category ");
 } 

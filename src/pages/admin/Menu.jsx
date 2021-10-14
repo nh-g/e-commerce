@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 // Project files
 import useFetch from '../../hooks/useFetch';
-import CategoryMasonry from '../menu/CategoryMasonry';
+import CategoryMasonry from './CategoryMasonry';
 import MappingList from '../../shared/MappingList';
 import CreateCategory from '../admin/CreateCategory';
 
