@@ -1,12 +1,13 @@
 // NPM packages
 import { collection, doc } from "firebase/firestore/lite"; // normal methods
-import { addDoc, updateDoc, getDocs } from "firebase/firestore/lite"; // async methods
-
+import { addDoc, updateDoc, getDocs, deleteDoc } from "firebase/firestore/lite"; // async methods
 
 // Create file
-export async function createDoc(database, path, data) {
-  const docRef = await addDoc(collection(database, path), data);
-  console.log("Document written with ID: ", docRef.id);
+export async function createDocument(database, path, data) {
+  const collectionReference = collection(database, path);
+  const documentReference = await addDoc(collectionReference, data);
+
+  return documentReference.id;
 }
 
 // Read files
@@ -21,14 +22,14 @@ export async function getCollection(database, path) {
 }
 
 // Update document
-export async function modifyDoc(database, path, id, data) {
-  const docReference = doc(database, path, id);
-  await updateDoc(docReference, data);
+export async function updateDocument(database, path, id, data) {
+  const documentReference = doc(database, path, id);
+  await updateDoc(documentReference, data);
   console.log("Document updated ");
 }
 
 // Delete document
-export async function delDoc(database, path, id) {
+export async function deleteDocument(database, path, id) {
   deleteDoc(doc(database, path, id));
-  console.log("delDOC");
+  console.log("Document deleted");
 }

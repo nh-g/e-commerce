@@ -8,7 +8,7 @@ import FormItem from "../../shared/FormItem";
 import FormSubmit from "../../shared/FormSubmit";
 import UploadImage from "../../shared/UploadImage";
 import firestoreReference from "../../scripts/firebase/firebase";
-import { createDoc } from "../../scripts/firebase/fireStore";
+import { createDocument } from "../../scripts/firebase/fireStore";
 import { uploadFile } from "../../scripts/firebase/cloudStorage";
 import dataURLToFile from "../../scripts/upload-image/dataURLToFile";
 import readImage from "../../scripts/upload-image/readImage";
@@ -56,7 +56,7 @@ export default function CreateCategory({ categories, setToggler }) {
       imageURL: myImageURL,
     };
 
-    createDoc(firestoreReference, "categories", newCategory);
+    createDocument(firestoreReference, "categories", newCategory);
   }
 
   return (

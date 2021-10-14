@@ -1,13 +1,13 @@
 // NPM Packages
 
 // Project files
-import { createDoc, modifyDoc, delDoc } from "../scripts/firebase/fireStore";
+import { createDocument, updateDocument, deleteDocument } from "../scripts/firebase/fireStore";
 import firestoreReference from "../scripts/firebase/firebase";
 
 // Create a category using image URL
 export async function createCategoryURL(someCategory, someImageURL) {
   const newCategory = { ...someCategory, imageURL: someImageURL };
-  createDoc(firestoreReference, "categories", newCategory);
+  createDocument(firestoreReference, "categories", newCategory);
   alert(newCategory.title + " successfully added to category ");
 } 
 
