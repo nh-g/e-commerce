@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Delete from "./Delete";
 
 // Project file
-import { onUpdate } from "../../hooks/useCRUD";
 import Placeholder from "../../assets/images/image-placeholder.png";
 
 export default function ItemCategory({ item }) {
@@ -17,16 +16,6 @@ export default function ItemCategory({ item }) {
 
   console.log("ITEM", item.id);
 
-  function onUpdateButton() {
-    const editedItem = {
-      id: id,
-      title: title,
-      description: description,
-      imageURL: imageURL,
-    };
-
-    onUpdate(id, "categories", editedItem);
-  }
 
   return (
     <div className="masonry">
@@ -37,7 +26,6 @@ export default function ItemCategory({ item }) {
       <div className="right-content ">
         <div>
           <Delete dataSelected={item} />
-          {/* <button onClick={() => onUpdateButton()}>Update me</button> */}
         </div>
 
         <h2>{title.toUpperCase()}</h2>
