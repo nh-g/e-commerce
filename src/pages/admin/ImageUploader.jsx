@@ -4,7 +4,7 @@ import readImage from "../../scripts/upload-image/read-image";
 import resizeImage from "../../scripts/upload-image/resizeImage";
 import Placeholder from "../../assets/images/image-placeholder.png";
 
-export default function ImageUploader({imageURL, setImageURL}) {
+export default function ImageUploader({imageURL, setImageURL, title}) {
     
     const Image = imageURL === "" ? Placeholder : imageURL;
 

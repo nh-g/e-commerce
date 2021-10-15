@@ -5,45 +5,26 @@ import form from "../../utils/form.json";
 import FormItem from "../../shared/FormItem";
 import firestoreReference from "../../scripts/firebase/firebase";
 import { createDocument } from "../../scripts/firebase/fireStore";
-import { uploadFile } from "../../scripts/firebase/cloudStorage";
-import dataURLToFile from "../../scripts/upload-image/dataURLToFile";
-import readImage from "../../scripts/upload-image/read-image";
-import resizeImage from "../../scripts/upload-image/resizeImage";
-import Placeholder from "../../assets/images/image-placeholder.png";
+import ImageUploader from "./ImageUploader";
 
-export default function CreateCategory({ categories, setToggler }) {
+export default function CreateCategory({ setToggler }) {
   // Constants
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [imageURL, setImageURL] = useState("");
-  const Image = imageURL === "" ? Placeholder : imageURL;
 
-  // Method
-  async function onImageChange(event) {
-    const target = event.target;
-    const file = target.files[0];
-    const filename = `images/candidate-image-${title}.png`;
-
-    const originalImage = await readImage(file);
-    const resizedImage = await resizeImage(originalImage, 250, 250);
-    const finalImage = await dataURLToFile(resizedImage, `${filename}.png`);
-
-    const fileUpload = await uploadFile(filename, finalImage);
-
-    setImageURL(fileUpload);
-  }
-
+  // Methods
   function onSubmit(event) {
     event.preventDefault();
 
     const newCategory = {
       title: title.toLowerCase(),
       description: description,
-      imageURL: Image,
+      imageURL: imageURL,
     };
 
     createDocument(firestoreReference, "categories", newCategory);
-
+    setToggler(false);
   }
 
   return (
@@ -66,15 +47,7 @@ export default function CreateCategory({ categories, setToggler }) {
         </div>
 
         <div className="left-content">
-          <label className="custom-file-chooser">
-            <input
-              accept="image/gif, image/jpeg, image/png"
-              onChange={(event) => onImageChange(event)}
-              type="file"
-              required
-            />
-            <img src={Image} alt="User generated content" />
-          </label>
+          <ImageUploader imageURL={imageURL} setImageURL={setImageURL} title={title}/>
         </div>
 
         {/* Buttons */}

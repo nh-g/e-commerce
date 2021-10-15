@@ -1,15 +1,9 @@
 // NPM Packages
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 // Project file
-import Placeholder from "../../assets/images/image-placeholder.png";
-import { uploadFile } from "../../scripts/firebase/cloudStorage";
-import dataURLToFile from "../../scripts/upload-image/dataURLToFile";
-import readImage from "../../scripts/upload-image/read-image";
-import resizeImage from "../../scripts/upload-image/resizeImage";
 
-export default function CategoryMasonry({ item, editList }) {
+export default function CategoryMasonry({ item}) {
   // Constants
   const { id, link, title, description, imageURL } = item;
 
