@@ -1,11 +1,14 @@
 // NPM Packages
 import { Link } from "react-router-dom";
+import Delete from "./Delete";
 
 // Project file
 
 export default function CategoryMasonry({ item}) {
   // Constants
   const { id, link, title, description, imageURL } = item;
+
+  console.log("ITEM", item.id)
 
   return (
     <div className="masonry">
@@ -21,6 +24,7 @@ export default function CategoryMasonry({ item}) {
           <span className="cta">View {title.toUpperCase()}</span>
         </Link>
       </div>
+      <Delete dataSelected={item}/>
     </div>
   );
 }
