@@ -4,12 +4,12 @@ import { getFirestore } from "firebase/firestore/lite";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB_89OW7GbPOli2xE5Y5fNCv6Sgw7N3y10",
-  authDomain: "ecom-database-backup.firebaseapp.com",
-  projectId: "ecom-database-backup",
-  storageBucket: "ecom-database-backup.appspot.com",
-  messagingSenderId: "661209146704",
-  appId: "1:661209146704:web:47e49c9c9cdc35eba8b855",
+  apiKey: "AIzaSyBTn5zWlmrA--R7vCV-9xQ2-HSGg-qEP48",
+  authDomain: "backup-giang.firebaseapp.com",
+  projectId: "backup-giang",
+  storageBucket: "backup-giang.appspot.com",
+  messagingSenderId: "933824973433",
+  appId: "1:933824973433:web:d7ac34d906eeceecf622a8",
 };
 
 const firebaseInstance = initializeApp(firebaseConfig);

@@ -8,9 +8,10 @@ export default function Menu() {
   const categoriesFireBase = useFetch("categories");
   const categoriesData = categoriesFireBase.data;
 
+  
+
   return (
     <div className="menu">
-
       <h1>MENU</h1>
       <MappingList getData={categoriesData} Component={CategoryMasonry} />
     </div>

@@ -1,52 +1,71 @@
-// NPM packages
 import { useState } from "react";
 
 // Project files
 import form from "../../utils/form.json";
 import FormItem from "../../shared/FormItem";
+import Dropdown from "../../shared/Dropdown";
 import firestoreReference from "../../scripts/firebase/firebase";
 import { createDocument } from "../../scripts/firebase/fireStore";
 import ImageUploader from "./ImageUploader";
 
-export default function CreateCategory({ setToggler }) {
-  // Constants
+export default function CreateProduct({ categories, setToggler }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [ingredients, setIngredients] = useState([]);
+  const [price, setPrice] = useState("");
+  const [category, setCategory] = useState("");
   const [imageURL, setImageURL] = useState("");
 
-  // Methods
+  const newData = { title: title, description: description };
+  console.log(newData, imageURL);
+
+
   function onSubmit(event) {
-    event.preventDefault();
+      event.preventDefault();
 
-    const newCategory = {
-      title: title.toLowerCase(),
-      description: description,
-      imageURL: imageURL,
-    };
+      const newProduct = {
+        title: title.toLowerCase(),
+        description: description,
+        ingredients: ingredients,
+        price: parseInt(price),
+        categoryID: category.id,
+        imageURL: imageURL,
+      };
 
-    createDocument(firestoreReference, "categories", newCategory);
-    setToggler(false);
+      createDocument(firestoreReference, "products", newProduct);
+      setToggler(false);
   }
 
   return (
     <section className="section-admin">
-      <h2>Create Category</h2>
-      <p className="admin-instructions">All fields are required</p>
+      <h2> Edit Category</h2>
+      <div className="drop-container">
+        <Dropdown items={categories} hook={[category, setCategory]}>
+          Category
+        </Dropdown>
+      </div>
 
       <form className="masonry">
         <div className="right-content ">
-          <FormItem
-            settings={form.title.settings}
-            hook={[title, setTitle]}
-            required
-          />
+          <FormItem settings={form.title.settings} hook={[title, setTitle]} />
           <FormItem
             settings={form.description.settings}
             hook={[description, setDescription]}
-            required
+          />
+          <FormItem
+            settings={form.ingredients.settings}
+            hook={[
+              ingredients.join(" "),
+              (str) => {
+                setIngredients(str.split(" "));
+              },
+            ]}
+          />
+          <FormItem
+            settings={form.price.settings}
+            hook={[price, setPrice]}
           />
         </div>
-
         <div className="left-content">
           <ImageUploader
             imageURL={imageURL}

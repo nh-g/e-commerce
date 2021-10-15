@@ -7,7 +7,7 @@ import Placeholder from "../../assets/images/image-placeholder.svg";
 
 export default function ItemCategory({ item }) {
   // Constants
-  const { id, link, title, description, imageURL } = item;
+  const { id, title, description, imageURL } = item;
 
   const Image =
     imageURL === "" || imageURL === null || imageURL === undefined
@@ -19,9 +19,11 @@ export default function ItemCategory({ item }) {
 
   return (
     <div className="masonry">
-      <div className="left-content">
-        <img src={Image} alt="" />
-      </div>
+      <Link to={`/menu/${id}`}>
+        <div className="left-content">
+          <img src={Image} alt="" />
+        </div>
+      </Link>
 
       <div className="right-content ">
         <div>
@@ -30,7 +32,7 @@ export default function ItemCategory({ item }) {
 
         <h2>{title.toUpperCase()}</h2>
         <p>{description}</p>
-        <Link to={`/${link}`}>
+        <Link to={`/menu/${id}`}>
           <span className="cta">View {title.toUpperCase()}</span>
         </Link>
       </div>
