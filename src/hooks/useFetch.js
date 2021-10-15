@@ -26,7 +26,7 @@ export default function useFetch(collection) {
   // Hook
   useEffect(() => {
     fetchData(firestoreReference, collection);
-  }, [firestoreReference, collection]);
+  }, [fetchData]);
 
   return { data, error, loading, setData };
 }
