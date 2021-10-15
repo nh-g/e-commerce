@@ -29,7 +29,7 @@ export default function ImageUploader({imageURL, setImageURL, title}) {
             accept="image/gif, image/jpeg, image/png"
             onChange={(event) => onImageChange(event)}
             type="file"
-            required
+            // required
         />
         <img src={Image} alt="User generated content" />
         </label>

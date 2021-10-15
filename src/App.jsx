@@ -13,7 +13,7 @@ import Checkout from "./pages/checkout/Checkout";
 import Footer from "./shared/Footer";
 import { useStateValue } from "./state/StateProvider";
 import { authentication as auth } from "./scripts/firebase/authentication-firebase";
-import MenuAdmin from "./pages/admin/Menu"
+import AdminCategories from "./pages/admin/Categories";
 
 export default function App() {
 
@@ -58,7 +58,7 @@ export default function App() {
             </Route>
 
             <Route path="/admin">
-              <MenuAdmin />
+              <AdminCategories />
             </Route>
 
             <Route path="/login">

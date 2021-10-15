@@ -3,11 +3,11 @@ import { useState } from 'react';
 
 // Project files
 import useFetch from '../../hooks/useFetch';
-import CategoryMasonry from './CategoryMasonry';
+import ItemCategory from "./ItemCategory";
 import MappingList from '../../shared/MappingList';
 import CreateCategory from './CreateCategory';
 
-export default function Menu() {
+export default function Categories() {
   // Hooks
   const categoriesFireBase = useFetch("categories");
   const categoriesData = categoriesFireBase.data;
@@ -25,7 +25,7 @@ export default function Menu() {
       <h1>MENU</h1>
 
       {!toggler && (
-        <MappingList getData={categoriesData} Component={CategoryMasonry} />
+        <MappingList getData={categoriesData} Component={ItemCategory} />
       )}
     </div>
   );
