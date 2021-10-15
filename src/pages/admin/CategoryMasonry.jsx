@@ -12,19 +12,18 @@ export default function CategoryMasonry({ item}) {
 
   return (
     <div className="masonry">
-
       <div className="left-content">
         <img src={imageURL} alt="" />
       </div>
 
       <div className="right-content ">
+        <Delete dataSelected={item} />
         <h2>{title.toUpperCase()}</h2>
         <p>{description}</p>
         <Link to={`/${link}`}>
           <span className="cta">View {title.toUpperCase()}</span>
         </Link>
       </div>
-      <Delete dataSelected={item}/>
     </div>
   );
 }
