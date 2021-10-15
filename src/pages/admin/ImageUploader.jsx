@@ -6,7 +6,8 @@ import Placeholder from "../../assets/images/image-placeholder.png";
 
 export default function ImageUploader({imageURL, setImageURL, title}) {
     
-    const Image = imageURL === "" ? Placeholder : imageURL;
+    const Image = imageURL === "" || imageURL === null || imageURL === undefined 
+    ? Placeholder : imageURL;
 
       // Method
     async function onImageChange(event) {

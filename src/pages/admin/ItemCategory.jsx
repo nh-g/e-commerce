@@ -4,28 +4,34 @@ import Delete from "./Delete";
 
 // Project file
 import { onUpdate } from "../../hooks/useCRUD";
-export default function ItemCategory({ item}) {
+import Placeholder from "../../assets/images/image-placeholder.png";
+
+export default function ItemCategory({ item }) {
   // Constants
   const { id, link, title, description, imageURL } = item;
 
-  console.log("ITEM", item.id)
+  const Image =
+    imageURL === "" || imageURL === null || imageURL === undefined
+      ? Placeholder
+      : imageURL;
 
-  // function onUpdateButton() {
-  //   const editedCandidate = {
-  //     id: id,
-  //     title: title,
-  //     description: description,
-  //     imageURL: imageURL,
-  //   };
+  console.log("ITEM", item.id);
 
-  //   onUpdate(id, editedCandidate);
-  // }
+  function onUpdateButton() {
+    const editedItem = {
+      id: id,
+      title: title,
+      description: description,
+      imageURL: imageURL,
+    };
 
+    onUpdate(id, "categories", editedItem);
+  }
 
   return (
     <div className="masonry">
       <div className="left-content">
-        <img src={imageURL} alt="" />
+        <img src={Image} alt="" />
       </div>
 
       <div className="right-content ">
