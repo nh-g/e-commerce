@@ -4,12 +4,12 @@ import { getFirestore } from "firebase/firestore/lite";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBTn5zWlmrA--R7vCV-9xQ2-HSGg-qEP48",
-  authDomain: "backup-giang.firebaseapp.com",
-  projectId: "backup-giang",
-  storageBucket: "backup-giang.appspot.com",
-  messagingSenderId: "933824973433",
-  appId: "1:933824973433:web:d7ac34d906eeceecf622a8",
+  apiKey: "AIzaSyAfGq7M0B2NxNZLGhdfCi2WTGZacxUFcX8",
+  authDomain: "ecommerce-giang.firebaseapp.com",
+  projectId: "ecommerce-giang",
+  storageBucket: "ecommerce-giang.appspot.com",
+  messagingSenderId: "721043646639",
+  appId: "1:721043646639:web:603bc36e7f1d593bae0c5a",
 };
 
 const firebaseInstance = initializeApp(firebaseConfig);

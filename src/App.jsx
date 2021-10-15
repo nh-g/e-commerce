@@ -70,9 +70,9 @@ export default function App() {
               <AdminMenu />
             </Route>
 
-            {/* <Route path="/login">
+             <Route path="/login">
               <Login />
-            </Route> */}
+            </Route> 
 
             <Route path="/checkout">
               <Checkout />
