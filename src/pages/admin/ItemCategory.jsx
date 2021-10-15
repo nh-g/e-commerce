@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Delete from "./Delete";
 
 // Project file
-import Placeholder from "../../assets/images/image-placeholder.png";
+import Placeholder from "../../assets/images/image-placeholder.svg";
 
 export default function ItemCategory({ item }) {
   // Constants

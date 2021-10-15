@@ -1,7 +1,7 @@
 // NPM Packages
 
 // Project files
-import { updateDocument, deleteDocument } from "../scripts/firebase/fireStore";
+import {createDocument, deleteDocument } from "../scripts/firebase/fireStore";
 import firestoreReference from "../scripts/firebase/firebase";
 
 // Delete element by ID
@@ -10,8 +10,9 @@ export async function deleteElement(path, id) {
   console.log(path, " deleted", id);
 }
 
-// Edit element by ID
+//Create a dish using URL link
+export async function createDishURL(someDish, someImageURL) {
+  const newDish = { ...someDish, imageURL: someImageURL };
+  createDocument(firestoreReference, "categories", newDish);
+}
 
-// export async function onUpdate(id, editedItem, path) {
-//     updateDocument(firestoreReference, path, id, editedItem);
-//   }

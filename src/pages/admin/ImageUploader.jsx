@@ -2,7 +2,7 @@ import { uploadFile } from "../../scripts/firebase/cloudStorage";
 import dataURLToFile from "../../scripts/upload-image/dataURLToFile";
 import readImage from "../../scripts/upload-image/read-image";
 import resizeImage from "../../scripts/upload-image/resizeImage";
-import Placeholder from "../../assets/images/image-placeholder.png";
+import Placeholder from "../../assets/images/image-placeholder.svg";
 
 export default function ImageUploader({imageURL, setImageURL, title}) {
     

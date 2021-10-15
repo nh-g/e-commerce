@@ -47,7 +47,19 @@ export default function CreateCategory({ setToggler }) {
         </div>
 
         <div className="left-content">
-          <ImageUploader imageURL={imageURL} setImageURL={setImageURL} title={title}/>
+          <ImageUploader
+            imageURL={imageURL}
+            setImageURL={setImageURL}
+            title={title}
+          />
+          <div className="url">
+            <p>... or copy/paste link :</p>
+            <input
+              type="text"
+              onChange={(e) => setImageURL(e.target.value)}
+              placeholder=" https://..."
+            />
+          </div>
         </div>
 
         {/* Buttons */}
