@@ -14,6 +14,15 @@ export default function Menu() {
 
   const [toggler, setToggler] = useState(false);
 
+  // // Methods
+  // function editList(editedItem) {
+  //   const index = list.findIndex((item) => item.id === editedItem.id);
+  //   const clonedList = [...list];
+
+  //   clonedList[index] = editedItem;
+  //   setList(clonedList);
+  // }
+
   return (
     <div className="menu">
       <button className="btn-blue" onClick={() => setToggler(!toggler)}>

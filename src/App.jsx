@@ -57,7 +57,7 @@ export default function App() {
               <Menu />
             </Route>
 
-            <Route path="/admin/menu">
+            <Route path="/admin">
               <MenuAdmin />
             </Route>
 
