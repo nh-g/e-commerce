@@ -32,15 +32,24 @@ export default function CategoryPage() {
       {categories.error !== null && <BoxError />}
       {!categories.loading && categories.error === null && (
         <main className="page-category">
-          <h1>{currentCategory.title}</h1>
+          
+          <section className="page-hero">
+                      <div className="add">
+            <label>
+              +
+              <input
+                className="btn-circle"
+                onClick={() => setToggler(!toggler)}
+              />
+            </label>
+            <p>Add Product</p>
+          </div>
 
-          <section className="section-description">
-            <p>{currentCategory.description}</p>
+            <h1>{currentCategory.title}</h1>
+            <small className="section-description">
+              {currentCategory.description}
+            </small>
           </section>
-
-          <button className="btn-blue" onClick={() => setToggler(!toggler)}>
-            Add a product
-          </button>
 
           {toggler && (
             <CreateProduct category={currentCategory} setToggler={setToggler} />

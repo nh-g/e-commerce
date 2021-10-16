@@ -36,7 +36,7 @@ export default function Browser() {
               <AdminCategoryPage />
             </Route>
 
-            <Route path="/admin">
+            <Route exact path="/admin">
               <AdminMenu />
             </Route>
 

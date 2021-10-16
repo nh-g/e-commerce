@@ -133,3 +133,29 @@ input[type="submit"]
       color: $white
     .dropdown-arrow
       filter: invert(0)
+
+.add
+    width: 100%
+    align-self: flex-start
+    display: flex
+    gap: 12px
+    // grid-template-columns: min-content 1fr
+    align-items: center
+    padding: 0 8px
+    height: 60px
+    label
+      $size: $button-height
+      cursor: pointer
+      display: flex
+      justify-content: center
+      align-items: center
+      height: $size
+      width: $size
+      background: $red
+      border-radius: $size
+      input
+          display: none
+      &:hover
+          background: $dark
+          border-color: $dark
+          transition: ease .3s
