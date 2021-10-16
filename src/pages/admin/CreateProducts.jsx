@@ -3,17 +3,16 @@ import { useState } from "react";
 // Project files
 import form from "../../utils/form.json";
 import FormItem from "../../shared/FormItem";
-import Dropdown from "../../shared/Dropdown";
 import firestoreReference from "../../scripts/firebase/firebase";
 import { createDocument } from "../../scripts/firebase/fireStore";
 import ImageUploader from "./ImageUploader";
 
-export default function CreateProduct({ categories, setToggler }) {
+export default function CreateProduct({ category, setToggler }) {
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("");
   const [imageURL, setImageURL] = useState("");
 
   const newData = { title: title, description: description };
@@ -38,12 +37,7 @@ export default function CreateProduct({ categories, setToggler }) {
 
   return (
     <section className="section-admin">
-      <h2> Edit Category</h2>
-      <div className="drop-container">
-        <Dropdown items={categories} hook={[category, setCategory]}>
-          Category
-        </Dropdown>
-      </div>
+      <h2> Create Product</h2>
 
       <form className="masonry">
         <div className="right-content ">
@@ -67,7 +61,7 @@ export default function CreateProduct({ categories, setToggler }) {
           />
         </div>
         <div className="left-content">
-          <ImageUploader
+          {/* <ImageUploader
             imageURL={imageURL}
             setImageURL={setImageURL}
             title={title}
@@ -79,7 +73,7 @@ export default function CreateProduct({ categories, setToggler }) {
               onChange={(e) => setImageURL(e.target.value)}
               placeholder=" https://..."
             />
-          </div>
+          </div> */}
         </div>
       </form>
       {/* Buttons */}

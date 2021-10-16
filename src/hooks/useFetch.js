@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { getCollection } from "../scripts/firebase/fireStore";
 import firestoreReference from "../scripts/firebase/firebase";
 export default function useFetch(collection) {
-
   // State
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
@@ -24,9 +23,13 @@ export default function useFetch(collection) {
   }
 
   // Hook
+  // useEffect(() => {
+  //   fetchData(firestoreReference, collection);
+  // }, [fetchData]);
+
   useEffect(() => {
     fetchData(firestoreReference, collection);
-  }, [fetchData]);
+  }, [firestoreReference, collection]);
 
   return { data, error, loading, setData };
 }

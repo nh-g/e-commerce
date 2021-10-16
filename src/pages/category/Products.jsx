@@ -1,6 +1,8 @@
 import useFetch from "../../hooks/useFetch";
 import Spinner from "../../shared/Spinner";
 import BoxError from "../../shared/BoxError";
+import MappingList from "../../shared/MappingList";
+import ProductCard from "../../shared/ProductCard";
 
 export default function Products({ category }) {
   // Hook
@@ -15,21 +17,6 @@ export default function Products({ category }) {
     });
   }
 
-  // Component
-  const ProductsItems = listOfProducts.map((item) => {
-    return (
-      <a
-        key={item.id}
-        href={`./${item.categoryID}/${item.id}`}
-        className="card"
-      >
-        <img src={item.imageURL} alt="img" />
-        <h3 className="title">{item.title}</h3>
-        <p className="description">{item.description}</p>
-        <h2 className="price">{item.price} Kr</h2>
-      </a>
-    );
-  });
 
   return (
     <>
@@ -40,7 +27,9 @@ export default function Products({ category }) {
           {listOfProducts.length === 0 ? (
             <h4 className="empty-list">More products are coming soon</h4>
           ) : (
-            <section className="section-products ">{ProductsItems} </section>
+            <section className="section-products ">
+              <MappingList getData={listOfProducts} Component = {ProductCard} />
+            </section>
           )}
         </>
       )}

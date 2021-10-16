@@ -4,16 +4,16 @@ import { getFirestore } from "firebase/firestore/lite";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAfGq7M0B2NxNZLGhdfCi2WTGZacxUFcX8",
-  authDomain: "ecommerce-giang.firebaseapp.com",
-  projectId: "ecommerce-giang",
-  storageBucket: "ecommerce-giang.appspot.com",
-  messagingSenderId: "721043646639",
-  appId: "1:721043646639:web:603bc36e7f1d593bae0c5a",
+  apiKey: "AIzaSyB1BqlNPYWwJmC7LeMpwKfcmHnGy5GyOvc",
+  authDomain: "bbq-ecom.firebaseapp.com",
+  projectId: "bbq-ecom",
+  storageBucket: "bbq-ecom.appspot.com",
+  messagingSenderId: "196374467537",
+  appId: "1:196374467537:web:e07ecee8d03b3cfc1846f0",
 };
 
 const firebaseInstance = initializeApp(firebaseConfig);
 const firestoreReference = getFirestore(firebaseInstance);
-export const cloudStorageReference = getStorage(firebaseInstance);
+// export const cloudStorageReference = getStorage(firebaseInstance);
 
 export default firestoreReference;

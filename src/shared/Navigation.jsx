@@ -12,11 +12,11 @@ import { authentication } from "../scripts/firebase/authentication-firebase";
 export default function NavigationBar() {
   // Global state
   const [{ cart, user }, dispatch] = useStateValue();
-  const handleAuthentication = () => {
-    if (user) {
-      signOut(authentication);
-    }
-  };
+  // const handleAuthentication = () => {
+  //   if (user) {
+  //     signOut(authentication);
+  //   }
+  // };
 
   return (
     <nav id="navigation-bar">
@@ -41,7 +41,7 @@ export default function NavigationBar() {
           <img src={flameIcon} alt="" style={{ height: "10px" }} />
         </Link>
 
-        <Link to={!user && "/login"}>
+        {/* <Link to={!user && "/login"}>
           <div onClick={handleAuthentication} className="header__option">
             <span className="header__optionLineOne">
               Hello {!user ? "Guest" : user.email}
@@ -50,7 +50,7 @@ export default function NavigationBar() {
               {user ? "Sign Out" : "Sign In"}
             </span>
           </div>
-        </Link>
+        </Link> */}
 
         <Link to="/checkout">
           <div className="header__optionCart">

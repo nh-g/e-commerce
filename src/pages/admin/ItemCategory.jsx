@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Delete from "./Delete";
 
 // Project file
-import Placeholder from "../../assets/images/image-placeholder.svg";
+import Placeholder from "../../assets/images/flame.jpg";
 
 export default function ItemCategory({ item }) {
   // Constants
@@ -19,7 +19,7 @@ export default function ItemCategory({ item }) {
 
   return (
     <div className="masonry">
-      <Link to={`/menu/${id}`}>
+      <Link to={`/admin/menu/${id}`}>
         <div className="left-content">
           <img src={Image} alt="" />
         </div>
@@ -32,7 +32,7 @@ export default function ItemCategory({ item }) {
 
         <h2>{title.toUpperCase()}</h2>
         <p>{description}</p>
-        <Link to={`/menu/${id}`}>
+        <Link to={`/admin/menu/${id}`}>
           <span className="cta">View {title.toUpperCase()}</span>
         </Link>
       </div>

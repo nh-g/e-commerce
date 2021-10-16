@@ -9,6 +9,7 @@ import Login from "./pages/login/Login";
 import Checkout from "./pages/checkout/Checkout";
 import Footer from "./shared/Footer";
 import AdminMenu from "./pages/admin/Categories";
+import AdminCategoryPage from "./pages/admin/CategoryPage";
 import CategoryPage from "./pages/category/CategoryPage";
 
 export default function Browser() {
@@ -32,7 +33,7 @@ export default function Browser() {
             </Route>
 
             <Route path="/admin/menu/:categoryID">
-              <CategoryPage />
+              <AdminCategoryPage />
             </Route>
 
             <Route path="/admin">

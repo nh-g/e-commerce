@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 // Project files
-import Placeholder from "../../assets/images/image-placeholder.svg";
+import Placeholder from "../../assets/images/flame.jpg";
 
 export default function CategoryMasonry({ item }) {
   const { id, title, description, imageURL } = item;

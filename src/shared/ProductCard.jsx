@@ -1,10 +1,17 @@
+// NPM packages
+import { Link } from "react-router-dom";
+
 // Project files
-import ImageLoader from "../../shared/ImageLoader";
-import { useStateValue } from "../../state/StateProvider";
+import Placeholder from "../assets/images/flame.jpg";
+import { useStateValue } from "../state/StateProvider";
 
 export default function HomeProduct({ item }) {
   // Properties
-  const { id, title, imageURL, price, rating } = item;
+  const { id, title, imageURL, price, rating, categoryID, description } = item;
+  const Image =
+    imageURL === "" || imageURL === null || imageURL === undefined
+      ? Placeholder
+      : imageURL;
 
   // Global State
   const [{ cart }, dispatch] = useStateValue();
@@ -25,7 +32,7 @@ export default function HomeProduct({ item }) {
   };
 
   return (
-    <div className="product">
+    <Link to={`./${item.categoryID}/${item.id}`} className="product">
       <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
@@ -33,20 +40,19 @@ export default function HomeProduct({ item }) {
           <strong>{price}</strong>
         </p>
         <div className="product__rating">
-          {Array(rating)
+          {/* {Array(rating)
             .fill()
             .map((_, i) => (
               // <p>⭐️ </p>
               <p>★</p>
-            ))}
+            ))} */}
         </div>
       </div>
-
-      <ImageLoader filePath={imageURL} />
+      <img src={Image} alt="bbq food" />
 
       <span className="cta" onClick={addToCart}>
         Add to Cart
       </span>
-    </div>
+    </Link>
   );
 }
