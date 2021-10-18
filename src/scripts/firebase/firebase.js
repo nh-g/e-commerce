@@ -14,6 +14,6 @@ const firebaseConfig = {
 
 const firebaseInstance = initializeApp(firebaseConfig);
 const firestoreReference = getFirestore(firebaseInstance);
-// export const cloudStorageReference = getStorage(firebaseInstance);
+export const cloudStorageReference = getStorage(firebaseInstance);
 
 export default firestoreReference;

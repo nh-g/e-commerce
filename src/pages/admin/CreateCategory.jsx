@@ -48,8 +48,8 @@ export default function CreateCategory({ setToggler }) {
         </div>
 
         <div className="left-content">
-          {/* <ImageUploader
-            imageURL={imageURL}w
+          <ImageUploader
+            imageURL={imageURL}
             setImageURL={setImageURL}
             title={title}
           />
@@ -60,7 +60,7 @@ export default function CreateCategory({ setToggler }) {
               onChange={(e) => setImageURL(e.target.value)}
               placeholder=" https://..."
             />
-          </div> */}
+          </div>
         </div>
       </form>
       {/* Buttons */}

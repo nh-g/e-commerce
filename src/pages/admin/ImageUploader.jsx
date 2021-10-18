@@ -2,7 +2,7 @@ import { uploadFile } from "../../scripts/firebase/cloudStorage";
 import dataURLToFile from "../../scripts/upload-image/dataURLToFile";
 import readImage from "../../scripts/upload-image/read-image";
 import resizeImage from "../../scripts/upload-image/resizeImage";
-import Placeholder from "../../assets/images/image-placeholder.svg";
+import Placeholder from "../../assets/images/image-placeholder.png";
 
 export default function ImageUploader({imageURL, setImageURL, title}) {
     
@@ -25,14 +25,14 @@ export default function ImageUploader({imageURL, setImageURL, title}) {
     }
 
     return (
-        <label className="custom-file-chooser">
+      <label className="custom-file-chooser">
         <input
-            accept="image/gif, image/jpeg, image/png"
-            onChange={(event) => onImageChange(event)}
-            type="file"
-            // required
+          accept="image/gif, image/jpeg, image/png"
+          onChange={(event) => onImageChange(event)}
+          type="file"
+          // required
         />
         <img src={Image} alt="User generated content" />
-        </label>
-    )
+      </label>
+    );
 }

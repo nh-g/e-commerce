@@ -58,7 +58,7 @@ export default function CreateProduct({ category, setToggler }) {
           <FormItem settings={form.price.settings} hook={[price, setPrice]} />
         </div>
         <div className="left-content">
-          {/* <ImageUploader
+          <ImageUploader
             imageURL={imageURL}
             setImageURL={setImageURL}
             title={title}
@@ -70,7 +70,7 @@ export default function CreateProduct({ category, setToggler }) {
               onChange={(e) => setImageURL(e.target.value)}
               placeholder=" https://..."
             />
-          </div> */}
+          </div>
         </div>
       </form>
       {/* Buttons */}
