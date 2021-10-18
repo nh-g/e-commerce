@@ -38,6 +38,7 @@ export default function CreateProduct({ category, setToggler }) {
   return (
     <section className="section-admin">
       <h2> Create Product</h2>
+      <p className="admin-instructions">All fields are required *</p>
 
       <form className="masonry">
         <div className="right-content ">
