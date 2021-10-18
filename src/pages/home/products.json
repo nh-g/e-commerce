@@ -1,7 +1,8 @@
 [
   {
     "id": "1",
-    "title": "Well-seasoned Chipotle BBQ Pork Ribs, grilled to perfection",
+    "title": "Chipotle Barbecue Pork Ribs",
+    "description": "Well-seasoned Chipotle BBQ Pork Ribs, grilled to perfection, and brushed with a tangy, sweet,and spicy barbecue sauce. They are finger-licking delicious and a real summer hit! ",
     "price": "11.96",
     "rating": 5,
     "ingredients": "pork ribs pepper chilly",
@@ -9,7 +10,8 @@
   },
   {
     "id": "2",
-    "title": "Moroccan lamb marinade brings so much flavor to this BBQ boneless leg of lamb",
+    "title": "BBQ Boneless Leg of Lamb",
+    "description": "Moroccan lamb marinade brings so much flavor to this BBQ boneless leg of lamb",
     "price": "11.96",
     "rating": 4,
     "imagePath": "../assets/images/homeProducts/bonelesslamb.jpg"
@@ -23,11 +25,13 @@
   },
   {
     "id": "4",
-    "title": "Falling-off the-bone tender and tasty Chinese Barbecue Ribs (Char Siu)",
+    "title": "Chinese Pork Ribs (Char Siu)",
+    "description": "Falling-off the-bone tender and tasty Chinese Barbecue Ribs (Char Siu)",
     "price": "11.96",
     "rating": 4,
     "imagePath": "../assets/images/homeProducts/Parade-Chinese-Pork-Ribs-Char-Siu.jpg"
   },
+  
   {
     "id": "5",
     "title": "BBQ Peach Grilled Chicken Wings tender sweet sour hot",
