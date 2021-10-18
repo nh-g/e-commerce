@@ -32,27 +32,29 @@ export default function HomeProduct({ item }) {
   };
 
   return (
-    <Link to={`./${categoryID}/${id}`} className="product">
-      <div className="product__info">
-        <p>{title}</p>
-        <p className="product__price">
-          <small>$</small>
-          <strong>{price}</strong>
-        </p>
-        <div className="product__rating">
-          {/* {Array(rating)
+    <div className="product">
+      <Link to={`./${categoryID}/${id}`}>
+        <div className="product__info">
+          <p>{title}</p>
+          <p className="product__price">
+            <small>$</small>
+            <strong>{price}</strong>
+          </p>
+          <div className="product__rating">
+            {/* {Array(rating)
             .fill()
             .map((_, i) => (
               // <p>⭐️ </p>
               <p>★</p>
             ))} */}
+          </div>
         </div>
-      </div>
-      <img src={Image} alt="bbq food" />
+        <img src={Image} alt="bbq food" />
+      </Link>
 
       <span className="cta" onClick={addToCart}>
         Add to Cart
       </span>
-    </Link>
+    </div>
   );
 }
