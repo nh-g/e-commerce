@@ -32,7 +32,7 @@ export default function HomeProduct({ item }) {
   };
 
   return (
-    <Link to={`./${item.categoryID}/${item.id}`} className="product">
+    <Link to={`./${categoryID}/${id}`} className="product">
       <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
