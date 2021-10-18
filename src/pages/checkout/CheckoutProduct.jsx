@@ -17,8 +17,8 @@ export default function CheckoutProduct({ item }) {
 
   return (
     <div className="checkoutProduct">
-      {/* <img className="checkoutProduct-image" src={imageURL} /> */}
-      <ImageLoader filePath={imageURL} />
+      <img className="checkoutProduct-image" src={imageURL} />
+      {/* <ImageLoader filePath={imageURL} /> */}
       <div className="checkoutProduct__info">
         <p className="checkoutProduct__title">{title}</p>
         <p className="checkoutProduct__price">

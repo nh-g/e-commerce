@@ -74,15 +74,20 @@ export default function CreateProduct({ category, setToggler }) {
         </div>
       </form>
       {/* Buttons */}
-      <button
-        onClick={(event) => onSubmit(event)}
-        className="btn btn-main btn-300"
-      >
-        Create
-      </button>
-      <button onClick={() => setToggler(false)} className="btn btn-main btn-300">
-        Cancel
-      </button>
+      <div className="admin-options">
+        <button
+          onClick={(event) => onSubmit(event)}
+          className="btn btn-main btn-300"
+        >
+          Create
+        </button>
+        <button
+          onClick={() => setToggler(false)}
+          className="btn btn-main btn-300"
+        >
+          Cancel
+        </button>
+      </div>
     </section>
   );
 }

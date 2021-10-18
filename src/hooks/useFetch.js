@@ -23,13 +23,13 @@ export default function useFetch(collection) {
   }
 
   // Hook
-  // useEffect(() => {
-  //   fetchData(firestoreReference, collection);
-  // }, [fetchData]);
-
   useEffect(() => {
     fetchData(firestoreReference, collection);
-  }, [firestoreReference, collection]);
+  }, [fetchData]);
+
+  // useEffect(() => {
+  //   fetchData(firestoreReference, collection);
+  // }, [firestoreReference, collection]);
 
   return { data, error, loading, setData };
 }

@@ -21,3 +21,13 @@ body
     height: 30px
     border: 1px solid
     margin-top: 10px
+
+@mixin absolute-horizontal-centered
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+@mixin flex-full-centered
+    display: flex
+    justify-content: center
+    align-items: center

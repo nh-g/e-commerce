@@ -64,10 +64,21 @@ export default function CreateCategory({ setToggler }) {
         </div>
       </form>
       {/* Buttons */}
-      <button onClick={(event) => onSubmit(event)}>Create</button>
-      <button onClick={() => setToggler(false)} className="btn-cancel">
-        Cancel
-      </button>
+      {/* Buttons */}
+      <div className="admin-options">
+        <button
+          onClick={(event) => onSubmit(event)}
+          className="btn btn-main btn-300"
+        >
+          Create
+        </button>
+        <button
+          onClick={() => setToggler(false)}
+          className="btn btn-main btn-300"
+        >
+          Cancel
+        </button>
+      </div>
     </section>
   );
 }
