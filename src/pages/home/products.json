@@ -4,41 +4,42 @@
     "title": "Well-seasoned Chipotle BBQ Pork Ribs, grilled to perfection",
     "price": "11.96",
     "rating": 5,
-    "imageURL": "homeProducts/porkrib.jpg"
+    "ingredients": "pork ribs pepper chilly",
+    "imagePath": "../assets/images/homeProducts/porkrib.jpg"
   },
   {
     "id": "2",
     "title": "Moroccan lamb marinade brings so much flavor to this BBQ boneless leg of lamb",
     "price": "11.96",
     "rating": 4,
-    "imageURL": "homeProducts/bonelesslamb.jpg"
+    "imagePath": "../assets/images/homeProducts/bonelesslamb.jpg"
   },
   {
     "id": "3",
     "title": "Grilled Shrimp Skewers with delicious sauce doubles as a marinade",
     "price": "11.96",
     "rating": 4,
-    "imageURL": "homeProducts/Shrimp-Skewers.jpg"
+    "imagePath": "../assets/images/homeProducts/Shrimp-Skewers.jpg"
   },
   {
     "id": "4",
     "title": "Falling-off the-bone tender and tasty Chinese Barbecue Ribs (Char Siu)",
     "price": "11.96",
     "rating": 4,
-    "imageURL": "homeProducts/Parade-Chinese-Pork-Ribs-Char-Siu.jpg"
+    "imagePath": "../assets/images/homeProducts/Parade-Chinese-Pork-Ribs-Char-Siu.jpg"
   },
   {
     "id": "5",
     "title": "BBQ Peach Grilled Chicken Wings tender sweet sour hot",
     "price": "11.96",
     "rating": 3,
-    "imageURL": "homeProducts/Parade-Grilled-Chicken-Wings.jpg"
+    "imagePath": "../assets/images/homeProducts/Parade-Grilled-Chicken-Wings.jpg"
   },
   {
     "id": "6",
     "title": "Great Grand All you can eat BBQ",
     "price": "11.96",
     "rating": 0,
-    "imageURL": "homeProducts/buffet.jpg"
+    "imagePath": "../assets/images/homeProducts/homeProducts/buffet.jpg"
   }
 ]

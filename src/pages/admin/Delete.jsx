@@ -1,3 +1,7 @@
+// NPM Packages
+import { RiDeleteBinLine } from "react-icons/ri";
+
+// Project files
 import { deleteElement } from "../../hooks/useCRUD";
 
 export default function Delete({ dataSelected }) {
@@ -12,11 +16,14 @@ export default function Delete({ dataSelected }) {
   return (
     <form>
       <button
-        className="btn btn-main"
+        className="btn btn-main btn-32 delete"
         disabled={dataSelected === ""}
         onClick={handleDelete}
       >
-        <h4>Delete</h4>
+        <h4>
+          <RiDeleteBinLine
+          /> Delete
+        </h4>
       </button>
     </form>
   );

@@ -10,7 +10,14 @@
         width: 300px
         margin: auto
         
-    .page-hero
+    .section-products
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 5rem
+
+.page-hero
+        // background: url(#{$page-hero-background})
+        margin-bottom: 2rem
         height: 40vh
         background-color: $dark
         overflow: hidden
@@ -18,16 +25,14 @@
         justify-content: center
         align-content: center
 
-    h1
-        margin: 8px
-        line-height: 1.5
-        text-align: center
-        text-transform: uppercase
-        color: $red
-        font-size: 3rem
+        h1
+            margin: 8px
+            line-height: 1.5
+            text-align: center
+            text-transform: uppercase
+            color: $red
+            font-size: 3rem
 
-    small
-        text-align: center
-        font-size: 12px
-
-
+        small
+            text-align: center
+            font-size: 12px

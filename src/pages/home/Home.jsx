@@ -1,5 +1,5 @@
 import MappingList from "../../shared/MappingList.jsx";
-import homeProductData from "./homeProducts.json"; 
+import homeProductData from "./products.json"; 
 import Hero from "./Hero.jsx";
 import HomeProduct from '../../shared/ProductCard'
 

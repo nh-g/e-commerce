@@ -34,16 +34,16 @@ export default function CategoryPage() {
         <main className="page-category">
           
           <section className="page-hero">
-                      <div className="add">
-            <label>
-              +
-              <input
-                className="btn-circle"
-                onClick={() => setToggler(!toggler)}
-              />
-            </label>
+            <div className="add">
+              <label>
+                +
+                <input
+                  className="btn-circle"
+                  onClick={() => setToggler(!toggler)}
+                />
+              </label>
             <p>Add Product</p>
-          </div>
+            </div>
 
             <h1>{currentCategory.title}</h1>
             <small className="section-description">

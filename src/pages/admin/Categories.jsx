@@ -16,13 +16,26 @@ export default function Categories() {
 
   return (
     <div className="menu">
-      <button className="btn-blue" onClick={() => setToggler(!toggler)}>
-        Add a category
-      </button>
+      <section className="page-hero">
+        <div className="add">
+          <label>
+            +
+            <input
+              className="btn-circle"
+              onClick={() => setToggler(!toggler)}
+            />
+          </label>
+          <p>Add Category</p>
+        </div>
+        <h1>MENU</h1>
+
+        <small className="section-description">
+          Award-winning menu with regional inspiration, featuring smoked meats,
+          homemade sauces, and from scratch sides
+        </small>
+      </section>
 
       {toggler && <CreateCategory setToggler={setToggler} />}
-
-      <h1>MENU</h1>
 
       {!toggler && (
         <MappingList getData={categoriesData} Component={ItemCategory} />

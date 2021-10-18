@@ -55,10 +55,7 @@ export default function CreateProduct({ category, setToggler }) {
               },
             ]}
           />
-          <FormItem
-            settings={form.price.settings}
-            hook={[price, setPrice]}
-          />
+          <FormItem settings={form.price.settings} hook={[price, setPrice]} />
         </div>
         <div className="left-content">
           {/* <ImageUploader
@@ -77,8 +74,13 @@ export default function CreateProduct({ category, setToggler }) {
         </div>
       </form>
       {/* Buttons */}
-      <button onClick={(event) => onSubmit(event)}>Create</button>
-      <button onClick={() => setToggler(false)} className="btn-cancel">
+      <button
+        onClick={(event) => onSubmit(event)}
+        className="btn btn-main btn-300"
+      >
+        Create
+      </button>
+      <button onClick={() => setToggler(false)} className="btn btn-main btn-300">
         Cancel
       </button>
     </section>
