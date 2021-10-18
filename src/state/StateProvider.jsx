@@ -7,7 +7,6 @@ export const StateContext = createContext();
 export const initialState = {
   cart: [],
   user: null,
-  candidates: [],
 };
 
 // Wrap our app and provide it within dataLayer
