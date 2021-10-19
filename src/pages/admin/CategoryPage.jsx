@@ -43,7 +43,8 @@ export default function CategoryPage() {
               </label>
               <p>Add Product</p>
             </div>
-            <Delete dataSelected={currentCategory} />
+            
+            <Delete path="categories" dataSelected={currentCategory} />
 
             <h1>{currentCategory.title}</h1>
             <small className="section-description">

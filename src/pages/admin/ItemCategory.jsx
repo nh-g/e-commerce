@@ -29,7 +29,7 @@ export default function ItemCategory({ item }) {
       <div className="right-content ">
         <div className="admin-options">
           <Edit /> 
-          <Delete dataSelected={item} />
+          <Delete path = "categories" dataSelected={item} />
         </div>
 
         <h2>{title.toUpperCase()}</h2>

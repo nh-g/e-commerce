@@ -4,11 +4,11 @@ import { RiDeleteBinLine } from "react-icons/ri";
 // Project files
 import { deleteElement } from "../../hooks/useCRUD";
 
-export default function Delete({ dataSelected }) {
+export default function Delete({ dataSelected, path }) {
 
     function handleDelete() {
     if (window.confirm("Are you sure ?")) {
-        deleteElement("categories", dataSelected.id);
+        deleteElement(path, dataSelected.id);
         alert("Successfully deleted");
     }
   }

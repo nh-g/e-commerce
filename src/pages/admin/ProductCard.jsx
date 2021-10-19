@@ -35,15 +35,15 @@ export default function HomeProduct({ item }) {
 
   return (
     <div className="product">
-      <div className="admin-options">
-        <Edit/>
- 
-        <Delete dataSelected={item} />
-      </div>
-
       <Link to={`./${categoryID}/${id}`}>
         <div className="product__info">
           <p>{title}</p>
+          <div className="admin-options">
+            <Edit />
+
+            <Delete path="products" dataSelected={item} />
+          </div>
+
           <p className="product__price">
             <small>$</small>
             <strong>{price}</strong>
