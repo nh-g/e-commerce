@@ -6,6 +6,7 @@ import useFetch from '../../../hooks/useFetch';
 import ItemCategory from "./ItemCategory";
 import MappingList from '../../../shared/MappingList';
 import CreateCategory from '../CreateCategory';
+import ButtonAdd from '../../../shared/ButtonAdd';
 
 export default function Categories() {
   // Hooks
@@ -17,18 +18,10 @@ export default function Categories() {
   return (
     <div className="menu">
       <section className="page-hero">
-        <div className="add">
-          <label>
-            +
-            <input
-              className="btn-circle"
-              onClick={() => setToggler(!toggler)}
-            />
-          </label>
-          <p>Add Category</p>
-        </div>
-        <h1>MENU</h1>
+        <ButtonAdd label="Category" toggler={toggler} setToggler={setToggler} />
 
+        <h1>MENU</h1>
+        
         <small className="section-description">
           Award-winning menu with regional inspiration, featuring smoked meats,
           homemade sauces, and from scratch sides

@@ -10,6 +10,7 @@ import Spinner from "../../../shared/Spinner";
 import BoxError from "../../../shared/BoxError";
 import Delete from "../Delete";
 import CreateProduct from "../CreateProducts";
+import ButtonAdd from "../../../shared/ButtonAdd";
 
 export default function CategoryPage() {
   // Hooks
@@ -33,16 +34,8 @@ export default function CategoryPage() {
       {!categories.loading && categories.error === null && (
         <main className="page-category">
           <section className="page-hero">
-            <div className="add">
-              <label>
-                +
-                <input
-                  className="btn-circle"
-                  onClick={() => setToggler(!toggler)}
-                />
-              </label>
-              <p>Add Product</p>
-            </div>
+
+            <ButtonAdd label = "Product" toggler={toggler} setToggler={setToggler}/>
             
             <Delete path="categories" dataSelected={currentCategory} />
 
@@ -58,7 +51,7 @@ export default function CategoryPage() {
 
           <Products category={currentCategory} />
 
-          <NavLink to={`/menu`} className="btn btn-main btn-300">
+          <NavLink to={`/admin`} className="btn btn-main btn-300">
             <ButtonBack label="Go back to Menu" />
           </NavLink>
         </main>
