@@ -32,7 +32,6 @@ export default function CategoryPage() {
       {categories.error !== null && <BoxError />}
       {!categories.loading && categories.error === null && (
         <main className="page-category">
-          
           <section className="page-hero">
             <div className="add">
               <label>
@@ -42,8 +41,9 @@ export default function CategoryPage() {
                   onClick={() => setToggler(!toggler)}
                 />
               </label>
-            <p>Add Product</p>
+              <p>Add Product</p>
             </div>
+            <Delete dataSelected={currentCategory} />
 
             <h1>{currentCategory.title}</h1>
             <small className="section-description">

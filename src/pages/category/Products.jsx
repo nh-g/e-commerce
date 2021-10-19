@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch";
 import Spinner from "../../shared/Spinner";
 import BoxError from "../../shared/BoxError";
 import MappingList from "../../shared/MappingList";
-import ProductCard from "../../shared/ProductCard";
+import ProductCard from "./ProductCard";
 
 export default function Products({ category }) {
   // Hook
