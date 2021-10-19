@@ -4,12 +4,12 @@ import { getFirestore } from "firebase/firestore/lite";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB1BqlNPYWwJmC7LeMpwKfcmHnGy5GyOvc",
-  authDomain: "bbq-ecom.firebaseapp.com",
-  projectId: "bbq-ecom",
-  storageBucket: "bbq-ecom.appspot.com",
-  messagingSenderId: "196374467537",
-  appId: "1:196374467537:web:e07ecee8d03b3cfc1846f0",
+  apiKey: "AIzaSyCQ2tMoRu0_sMjNKEvAktCXCEmpO344ezI",
+  authDomain: "ecom-bbq-giang.firebaseapp.com",
+  projectId: "ecom-bbq-giang",
+  storageBucket: "ecom-bbq-giang.appspot.com",
+  messagingSenderId: "884743402329",
+  appId: "1:884743402329:web:ecc75f65f224df4de81248",
 };
 
 const firebaseInstance = initializeApp(firebaseConfig);

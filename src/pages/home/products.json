@@ -12,6 +12,7 @@
     "id": "2",
     "title": "BBQ Boneless Leg of Lamb",
     "description": "Moroccan lamb marinade brings so much flavor to this BBQ boneless leg of lamb",
+    "ingredients": "lamb lemon pepper chilly",
     "price": "11.96",
     "rating": 4,
     "imagePath": "../assets/images/homeProducts/bonelesslamb.jpg"

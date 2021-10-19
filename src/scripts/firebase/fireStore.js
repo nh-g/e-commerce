@@ -30,6 +30,7 @@ export async function updateDocument(database, path, id, data) {
 
 // Delete document
 export async function deleteDocument(database, path, id) {
-  deleteDoc(doc(database, path, id));
-  console.log("Document deleted");
+  const docReference = doc(database, path, id);
+  await deleteDoc(docReference);
+  console.log("Document deleted ");
 }
