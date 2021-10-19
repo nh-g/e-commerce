@@ -1,0 +1,37 @@
+@import ./_Description
+@import ./_Ingredients
+@import ./_Price
+
+.page-product
+  width: 100%
+  max-width: 800px
+  margin: auto
+
+  display: grid
+  gap: 0px
+  grid-auto-flow: row
+
+  justify-items: center
+  align-items: center
+
+  .btn-300
+    width: 300px
+    margin: 18px
+
+  .price
+    position: absolute
+    cursor: default
+    width: 800px
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    h2
+      width: max-content
+      padding: 8px 18px
+      margin: 12px
+      color: $white
+      background: $red
+      //border: 1px solid $red
+      border-radius: 8px
+      box-shadow: 2px 2px 4px rgba(0,0 ,0 ,0.5)
+      //@media only screen and (min-width: $desktopBreakpoint)

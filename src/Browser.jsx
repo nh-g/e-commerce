@@ -11,7 +11,7 @@ import Footer from "./shared/Footer";
 import AdminMenu from "./pages/admin/Categories";
 import AdminCategoryPage from "./pages/admin/CategoryPage";
 import CategoryPage from "./pages/category/CategoryPage";
-
+import ProductPage from "./pages/products/ProductPage";
 export default function Browser() {
   return (
     <>
@@ -31,6 +31,11 @@ export default function Browser() {
             <Route path="/menu/:categoryID">
               <CategoryPage />
             </Route>
+
+            <Route
+              path="/menu/:categoryID/:productID"
+              component={ProductPage}
+            />
 
             <Route path="/admin/menu/:categoryID">
               <AdminCategoryPage />

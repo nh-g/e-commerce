@@ -1,7 +1,7 @@
 // NPM Packages
 import { Link } from "react-router-dom";
 import Delete from "./Delete";
-import { RiEdit2Fill } from "react-icons/ri";
+import Edit from './Edit';
 
 // Project file
 import Placeholder from "../../assets/images/flame.jpg";
@@ -28,13 +28,7 @@ export default function ItemCategory({ item }) {
 
       <div className="right-content ">
         <div className="admin-options">
-          <form>
-            <button className="btn btn-main btn-32 edit">
-              <h4>
-                <RiEdit2Fill /> Edit
-              </h4>
-            </button>
-          </form>
+          <Edit /> 
           <Delete dataSelected={item} />
         </div>
 

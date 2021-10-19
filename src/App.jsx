@@ -9,8 +9,9 @@ import { authentication as auth } from "./scripts/firebase/authentication-fireba
 import Browser from "./Browser";
 
 export default function App() {
-
-  // Global state
+  /**
+   *   
+   * // Global state
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
     // will only run once when the app component loads...
@@ -35,9 +36,11 @@ export default function App() {
     });
   }, []);
 
+   */
+
   return (
     <div className="App">
-      <Browser/>
+      <Browser />
     </div>
   );
 }

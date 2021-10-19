@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 // Project files
 import Placeholder from "../../assets/images/flame.jpg";
 import { useStateValue } from "../../state/StateProvider";
+import Delete from "./Delete";
+import Edit from './Edit';
 
 export default function HomeProduct({ item }) {
   // Properties
@@ -33,19 +35,13 @@ export default function HomeProduct({ item }) {
 
   return (
     <div className="product">
-        <div className="admin-options">
-          <form>
-            <button className="btn btn-main btn-32 edit">
-              <h4>
-                <RiEdit2Fill /> Edit
-              </h4>
-            </button>
-          </form>
-          <Delete dataSelected={item} />
-        </div>
+      <div className="admin-options">
+        <Edit/>
+ 
+        <Delete dataSelected={item} />
+      </div>
 
       <Link to={`./${categoryID}/${id}`}>
-          
         <div className="product__info">
           <p>{title}</p>
           <p className="product__price">

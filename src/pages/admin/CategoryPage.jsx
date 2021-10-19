@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useParams, NavLink } from "react-router-dom";
 
 import useFetch from "../../hooks/useFetch";
-import Products from "../category/Products";
+import Products from "./Products";
 import ButtonBack from "../../shared/ButtonBack";
 import Spinner from "../../shared/Spinner";
 import BoxError from "../../shared/BoxError";
