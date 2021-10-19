@@ -1,5 +1,5 @@
 // NPM Packages
-import { useEffect, useState } from "react";
+import { useEffect, useCallback, useState } from "react";
 
 // Project files
 import { getCollection } from "../scripts/firebase/fireStore";
@@ -11,25 +11,20 @@ export default function useFetch(collection) {
   const [loading, setLoading] = useState(true);
 
   // Methods
-  async function fetchData(someDatabase, someCollection) {
+  const fetchData = useCallback(async(database, collection) => {
     try {
-      const response = await getCollection(someDatabase, someCollection);
+      const response = await getCollection(database, collection);
       setData(response);
     } catch (e) {
       setError(e);
     } finally {
       setLoading(false);
     }
-  }
+  },[])
 
-  // Hook
   useEffect(() => {
     fetchData(firestoreReference, collection);
   }, [fetchData]);
-
-  // useEffect(() => {
-  //   fetchData(firestoreReference, collection);
-  // }, [firestoreReference, collection]);
 
   return { data, error, loading, setData };
 }
