@@ -1,9 +1,12 @@
+// NPM packages
 import { useParams, Link } from "react-router-dom";
 
+// Project files
 import useFetch from "../../hooks/useFetch";
 import Description from "./Description";
 import Ingredients from "./Ingredients";
 
+import ButtonBack from '../../shared/ButtonBack'
 import BoxError from "../../shared/BoxError";
 import Spinner from "../../shared/Spinner";
 
@@ -15,6 +18,7 @@ export default function ProductPage() {
 
   // Const
   const product = getRelatedItem(products.data, productID);
+  console.log("Product Page", product);
 
   function getRelatedItem(array, id) {
     return array.filter((item) => {
@@ -29,11 +33,10 @@ export default function ProductPage() {
       {!products.loading && products.error === null && (
         <main className="page-product">
           <Description product={product} />
+          <h4>Ingredients:</h4>
           <Ingredients product={product} />
-          <Link to={`/${categoryID}`}>
-            <div>
-              <span className="cta">Back to category</span>
-            </div>
+          <Link to={`/${categoryID}`} className="btn btn-main btn-300">
+            <ButtonBack label="Go back to Category" />
           </Link>
         </main>
       )}
