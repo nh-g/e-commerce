@@ -15,9 +15,6 @@ export default function ItemCategory({ item }) {
       ? Placeholder
       : imageURL;
 
-  console.log("ITEM", item.id);
-
-
   return (
     <div className="masonry">
       <Link to={`/admin/menu/${id}`}>

@@ -12,50 +12,35 @@ import AdminMenu from "./pages/admin/menu/Categories";
 import AdminCategoryPage from "./pages/admin/category/CategoryPage";
 import CategoryPage from "./pages/category/CategoryPage";
 import ProductPage from "./pages/products/ProductPage";
+
 export default function Browser() {
   return (
-    <>
-      <BrowserRouter>
-        <Navigation />
+    <BrowserRouter>
+      <Navigation />
 
-        <Switch>
-          <div className="main">
-            <Route exact path="/">
-              <HomePage />
-            </Route>
+      <Switch>
+        <div className="main">
+          <Route exact path="/" component={HomePage} />
 
-            <Route exact path="/menu">
-              <Menu />
-            </Route>
+          <Route exact path="/menu" component={Menu} />
 
-            <Route exact path="/menu/:categoryID">
-              <CategoryPage />
-            </Route>
+          <Route exact path="/menu/:categoryID" component={CategoryPage} />
 
-            <Route
-              path="/menu/:categoryID/:productID">
-              <ProductPage/>
-            </Route>
+          <Route path="/menu/:categoryID/:productID" component={ProductPage} />
 
-            <Route path="/admin/menu/:categoryID">
-              <AdminCategoryPage />
-            </Route>
+          <Route path="/admin/menu/:categoryID" component={AdminCategoryPage} />
 
-            <Route exact path="/admin">
-              <AdminMenu />
-            </Route>
+          {/* <Route path="admin/edit/:categoryID" component={EditCategory} /> */}
 
-            <Route path="/login">
-              <Login />
-            </Route>
+          <Route exact path="/admin" component={AdminMenu} />
 
-            <Route path="/checkout">
-              <Checkout />
-            </Route>
-          </div>
-        </Switch>
-      </BrowserRouter>
+          <Route path="/login" component={Login} />
+
+          <Route path="/checkout" component={Checkout}/>
+        </div>
+      </Switch>
+
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
