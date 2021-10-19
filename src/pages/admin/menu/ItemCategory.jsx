@@ -1,10 +1,10 @@
 // NPM Packages
 import { Link } from "react-router-dom";
-import Delete from "./Delete";
-import Edit from './Edit';
+import Delete from "../Delete";
+import Edit from '../Edit';
 
 // Project file
-import Placeholder from "../../assets/images/flame.jpg";
+import Placeholder from "../../../assets/images/flame.jpg";
 
 export default function ItemCategory({ item }) {
   // Constants

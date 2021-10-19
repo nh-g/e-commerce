@@ -2,10 +2,10 @@
 import { Link } from "react-router-dom";
 
 // Project files
-import Placeholder from "../../assets/images/flame.jpg";
-import { useStateValue } from "../../state/StateProvider";
-import Delete from "./Delete";
-import Edit from './Edit';
+import Placeholder from "../../../assets/images/flame.jpg";
+import { useStateValue } from "../../../state/StateProvider";
+import Delete from "../Delete";
+import Edit from '../Edit';
 
 export default function HomeProduct({ item }) {
   // Properties

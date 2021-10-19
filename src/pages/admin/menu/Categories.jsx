@@ -2,10 +2,10 @@
 import { useState } from 'react';
 
 // Project files
-import useFetch from '../../hooks/useFetch';
+import useFetch from '../../../hooks/useFetch';
 import ItemCategory from "./ItemCategory";
-import MappingList from '../../shared/MappingList';
-import CreateCategory from './CreateCategory';
+import MappingList from '../../../shared/MappingList';
+import CreateCategory from '../CreateCategory';
 
 export default function Categories() {
   // Hooks

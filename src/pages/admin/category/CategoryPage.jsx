@@ -3,13 +3,13 @@ import { useState } from "react";
 
 import { useParams, NavLink } from "react-router-dom";
 
-import useFetch from "../../hooks/useFetch";
+import useFetch from "../../../hooks/useFetch";
 import Products from "./Products";
-import ButtonBack from "../../shared/ButtonBack";
-import Spinner from "../../shared/Spinner";
-import BoxError from "../../shared/BoxError";
-import Delete from "./Delete";
-import CreateProduct from "./CreateProducts";
+import ButtonBack from "../../../shared/ButtonBack";
+import Spinner from "../../../shared/Spinner";
+import BoxError from "../../../shared/BoxError";
+import Delete from "../Delete";
+import CreateProduct from "../CreateProducts";
 
 export default function CategoryPage() {
   // Hooks
