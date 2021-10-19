@@ -28,14 +28,14 @@ export default function Browser() {
               <Menu />
             </Route>
 
-            <Route path="/menu/:categoryID">
+            <Route exact path="/menu/:categoryID">
               <CategoryPage />
             </Route>
 
             <Route
-              path="/menu/:categoryID/:productID"
-              component={ProductPage}
-            />
+              path="/menu/:categoryID/:productID">
+              <ProductPage/>
+            </Route>
 
             <Route path="/admin/menu/:categoryID">
               <AdminCategoryPage />
