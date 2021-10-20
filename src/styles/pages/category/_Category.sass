@@ -1,0 +1,38 @@
+.page-category
+    margin: 0 auto
+    align-items: center
+    text-align: center
+    display: grid
+    grid-auto-flow: row
+    grid-auto-rows: min-content
+
+        
+    .section-products
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr))
+
+.page-hero
+        // background: url(#{$page-hero-background})
+        margin-bottom: 2rem
+        height: 40vh
+        background-color: $dark
+        overflow: hidden
+        display: grid
+        justify-content: center
+        align-content: center
+
+        h1
+            margin: 8px
+            line-height: 1.5
+            text-align: center
+            text-transform: uppercase
+            color: $red
+            font-size: 3rem
+
+        small
+            text-align: center
+            font-size: 12px
+            max-width: 800px
+        // @media only screen and (max-width: $desktopBreakpoint)
+        //     max-width: 300px
+        

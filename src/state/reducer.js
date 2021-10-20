@@ -1,15 +1,12 @@
-export const initialState = {
-  cart: [],
-  user: null,
-};
-
 export default function reducer(state, action) {
   switch (action.type) {
-    case "ADD_TO_CART":
-      return addItem(state, action);
-
+    /** USER REDUCER */
     case "SET_USER":
       return setUser(state, action);
+
+    /** CART REDUCER */
+    case "ADD_TO_CART":
+      return addItem(state, action);
 
     case "REMOVE_FROM_CART":
       return removeFromCart(state, action);
@@ -19,11 +16,13 @@ export default function reducer(state, action) {
   }
 }
 
+/** USER REDUCER */
 function setUser(state, action) {
   const { user } = action;
   return { ...state, user: user };
 }
 
+/** CART REDUCER */
 function addItem(state, action) {
   const { item } = action;
   if (item !== null) return { ...state, cart: [...state.cart, item] }; // return object
@@ -44,5 +43,5 @@ function removeFromCart(state, action) {
     );
   }
 
-  return {...state, cart: newCart};
+  return { ...state, cart: newCart };
 }

@@ -1,19 +1,26 @@
 html, body, #root, .App
   margin: 0
+  box-sizing: border-box
 
 body
-  background-color: $color-black
-  
+  background-color: $black  
 .App
-  color: $color-text-silver
+  color: $silver
   font-family: $font-text
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   display: grid
   grid-template-rows: auto 1fr auto
 
+li, table, td, tr, ul 
+  margin: 0
+  padding: 0
+
 .main
   margin-top: 56px
+
+ul
+  list-style-type: none
 
 @mixin button
     border-radius: 2px
@@ -21,3 +28,13 @@ body
     height: 30px
     border: 1px solid
     margin-top: 10px
+
+@mixin absolute-horizontal-centered
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+@mixin flex-full-centered
+    display: flex
+    justify-content: center
+    align-items: center

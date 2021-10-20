@@ -1,22 +1,17 @@
 // NPM Packages
-import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 
 // Project files
 import "./styles/style.sass";
-import Navigation from "./shared/Navigation";
-import HomePage from "./pages/home/Home";
-import Menu from "./pages/menu/Menu";
-import Login from "./pages/login/Login";
-import Checkout from "./pages/checkout/Checkout";
-import Footer from "./shared/Footer";
 import { useStateValue } from "./state/StateProvider";
 import { authentication as auth } from "./scripts/firebase/authentication-firebase";
+import Browser from "./Browser";
 
 export default function App() {
-
-  // Global state
+  /**
+   *   
+   * // Global state
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
     // will only run once when the app component loads...
@@ -41,33 +36,11 @@ export default function App() {
     });
   }, []);
 
+   */
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navigation />
-
-        <Switch>
-          <div className="main">
-            <Route exact path="/">
-              <HomePage />
-            </Route>
-
-            <Route path="/menu">
-              <Menu />
-            </Route>
-
-            <Route path="/login">
-              <Login />
-            </Route>
-
-            <Route path="/checkout">
-              <Checkout />
-            </Route>
-          </div>
-
-        </Switch>
-      </BrowserRouter>
-      <Footer />
+      <Browser />
     </div>
   );
 }

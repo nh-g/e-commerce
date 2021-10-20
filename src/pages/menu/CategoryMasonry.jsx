@@ -1,20 +1,29 @@
+// NPM Packages
 import { Link } from "react-router-dom";
 
-import ImageLoader from "../../shared/ImageLoader";
+// Project files
+import Placeholder from "../../assets/images/flame.jpg";
 
 export default function CategoryMasonry({ item }) {
-  const { link, title, description, imagePath } = item;
+  const { id, title, description, imageURL } = item;
+
+    const Image =
+      imageURL === "" || imageURL === null || imageURL === undefined
+        ? Placeholder
+        : imageURL;
+
   return (
     <div className="masonry">
-      <Link to={`/${link}`}>
+      <Link to={`/menu/${id}`}>
         <div className="left-content">
-          <ImageLoader filePath={imagePath} />
+          <img src={Image} alt="img" />
         </div>
       </Link>
-      <div className="right-content ">
+
+      <div className="right-content">
         <h2>{title.toUpperCase()}</h2>
         <p>{description}</p>
-        <Link to={`/${link}`}>
+        <Link to={`/menu/${id}`}>
           <span className="cta">View {title.toUpperCase()}</span>
         </Link>
       </div>

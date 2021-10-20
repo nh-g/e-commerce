@@ -1,0 +1,39 @@
+.section-ingredients
+  width: 80%
+  justify-content: center
+  margin: 0 auto !important
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  line-height: 1.5em
+  overflow: hidden 
+
+  @media only screen and (min-width: $desktopBreakpoint)
+    width: 800px
+    margin: 8px auto
+    padding: 0
+
+.pill 
+  border: 1px solid $silver
+  color: $silver
+  background-color: $dark
+  margin: 4px
+  padding: 5px 10px 5px 10px
+
+.pill:nth-child(even) 
+  border: 1px solid $red
+
+
+  ul
+    height: min-content
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+
+    li
+      margin: 3px 6px 3px 0
+
+  .food-icon
+    height: 80%
+    filter: invert(0.5)
+

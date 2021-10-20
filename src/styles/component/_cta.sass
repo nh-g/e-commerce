@@ -6,11 +6,158 @@ a
 .cta
   font-size: 1.1rem
   white-space: nowrap
-  background: $color-red
+  background: $red
   padding: 10px 7rem
   text-align: center
   margin-bottom: 2rem
-  color: $color-text-white
+  color: $white
 
 .cta:hover
   transform: scale(1.2)
+
+button
+  background: none
+  border: none
+  cursor: pointer
+
+.btn
+  cursor: pointer
+  height: $button-height
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 0 12px
+
+.btn-main
+  background: $red
+  border: 1px solid $red
+  border-radius: 8px
+  filter: brightness(0.8)
+
+  h3,h4
+    color: $white
+    text-transform: capitalize
+
+  .icon-btn
+    width: 20px
+    height: 20px
+    margin: 6px
+    filter: invert(1)
+
+  &:hover
+    transition: ease 0.3s
+    filter: brightness(1)
+
+  &:disabled
+    filter: saturate(0)
+    opacity: 0.05
+
+.btn-ghost
+  background: none
+  border: 2px solid $red
+  border-radius: 8px
+
+  h3,h4
+    color: $red
+    text-transform: capitalize
+
+  .icon-btn
+    width: 20px
+    height: 20px
+    margin: 6px
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(-45deg)
+
+  &:hover
+    transition: ease 0.3s
+    background: $red
+    border-color: $red
+    h3
+      color: $white
+    .icon-btn
+      filter: invert(1)
+
+
+.btn-circle
+  height: 44px
+  width: 44px
+  border-radius: 44px
+  background: $red
+  color: $white
+
+.select-ghost
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 24px
+
+  background: none
+  border: 2px solid $red
+  border-radius: 8px
+  width: 100%
+
+  h4
+    color: $red
+    text-transform: capitalize
+    font-weight: 400
+
+  .dropdown-arrow
+    width: 20px
+    height: 20px
+    margin: 6px
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(-45deg)
+
+  &:hover
+    transition: ease 0.3s
+    background: $red
+    h4
+      color: $white
+    .dropdown-arrow
+      filter: invert(0)
+
+.add
+    width: 100%
+    align-self: flex-start
+    display: flex
+    gap: 12px
+    // grid-template-columns: min-content 1fr
+    align-items: center
+    padding: 0 8px
+    height: 60px
+    label
+      $size: $button-height
+      cursor: pointer
+      display: flex
+      justify-content: center
+      align-items: center
+      height: $size
+      width: $size
+      background: $red
+      border-radius: $size
+      input
+          display: none
+      &:hover
+        transform: scale(1.2)
+        border-color: $dark
+        transition: ease .3s
+
+.btn-32
+  height: 32px
+  border-radius: 0
+
+.delete
+  background: $dark
+  &:hover
+    background: $red
+
+.admin-options
+  display: flex
+  
+.btn-300
+  width: 300px
+  margin: auto
+  margin-top: 12px
+  color: $white
+  font-size: 17px
+
+.page-hero .btn-32
+  width: 105px

@@ -1,0 +1,37 @@
+.custom-file-chooser 
+  border-radius: 4px
+  overflow: hidden
+
+
+.custom-file-chooser input[type="file"] 
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  z-index: -1
+
+
+.custom-file-chooser img 
+  vertical-align: middle
+  // max-height: 250px
+  object-fit: contain
+  background-color: $dark
+
+
+
+.url
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-direction: row-reverse
+    background: $dark
+    @media only screen and (min-width: $desktopBreakpoint)
+        flex-direction: row
+    p
+      margin: 0 12px
+    input
+        width: 100px
+        height: button-height
+        @media only screen and (min-width: $desktopBreakpoint)
+            width: 300px

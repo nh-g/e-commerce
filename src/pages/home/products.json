@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "title": "Chipotle Barbecue Pork Ribs",
+    "description": "Well-seasoned Chipotle BBQ Pork Ribs, grilled to perfection, and brushed with a tangy, sweet,and spicy barbecue sauce. They are finger-licking delicious and a real summer hit! ",
+    "price": "11.96",
+    "rating": 5,
+    "ingredients": "pork ribs pepper chilly",
+    "imagePath": "../assets/images/homeProducts/porkrib.jpg"
+  },
+  {
+    "id": "2",
+    "title": "BBQ Boneless Leg of Lamb",
+    "description": "Moroccan lamb marinade brings so much flavor to this BBQ boneless leg of lamb",
+    "ingredients": "lamb lemon pepper chilly",
+    "price": "11.96",
+    "rating": 4,
+    "imagePath": "../assets/images/homeProducts/bonelesslamb.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Grilled Shrimp Skewers with delicious sauce doubles as a marinade",
+    "price": "11.96",
+    "rating": 4,
+    "imagePath": "../assets/images/homeProducts/Shrimp-Skewers.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Chinese Pork Ribs (Char Siu)",
+    "description": "Falling-off the-bone tender and tasty Chinese Barbecue Ribs (Char Siu)",
+    "price": "11.96",
+    "rating": 4,
+    "imagePath": "../assets/images/homeProducts/Parade-Chinese-Pork-Ribs-Char-Siu.jpg"
+  },
+  
+  {
+    "id": "5",
+    "title": "BBQ Peach Grilled Chicken Wings tender sweet sour hot",
+    "price": "11.96",
+    "rating": 3,
+    "imagePath": "../assets/images/homeProducts/Parade-Grilled-Chicken-Wings.jpg"
+  },
+  {
+    "id": "6",
+    "title": "Great Grand All you can eat BBQ",
+    "price": "11.96",
+    "rating": 0,
+    "imagePath": "../assets/images/homeProducts/homeProducts/buffet.jpg"
+  }
+]
