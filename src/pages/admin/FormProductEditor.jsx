@@ -6,7 +6,7 @@ import ImageUploader from "./ImageUploader";
 import form from "../../utils/form.json";
 import FormItem from "../../shared/FormItem";
 
-export default function FormProductEditor({ onUpdateProduct, item }) {
+export default function FormProductEditor({ onUpdate, item }) {
   const { id, title, imageURL, description, ingredients, price } = item;
   const [productName, setProductName] = useState(title);
   const [productImageURL, setProductImageURL] = useState(imageURL);
@@ -24,7 +24,7 @@ export default function FormProductEditor({ onUpdateProduct, item }) {
       ingredients: ingredientList,
       price: productPrice,
     };
-    onUpdateProduct(product);
+    onUpdate(product);
   }
   return (
     <section className="section-admin">

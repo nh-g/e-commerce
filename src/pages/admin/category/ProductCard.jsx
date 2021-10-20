@@ -45,11 +45,6 @@ export default function HomeProduct({ item }) {
             <ButtonEdit
               to={`edit-product/${id}`}
             />
-            {/* <Link to="" className="btn btn-main btn-32 edit">
-              <h4>
-                <RiEdit2Fill /> Edit
-              </h4>
-            </Link> */}
 
             <Delete path="products" dataSelected={item} />
           </div>
