@@ -28,8 +28,6 @@ export default function FormProductEditor({ onUpdate, item }) {
   }
   return (
     <section className="section-admin">
-      <h2> Create Product</h2>
-      <p className="admin-instructions">All fields are required *</p>
 
       <form className="masonry">
         <div className="right-content ">
@@ -71,18 +69,10 @@ export default function FormProductEditor({ onUpdate, item }) {
           </div>
         </div>
       </form>
-      {/* Buttons */}
       <div className="admin-options">
         <button onClick={updateProduct} className="btn btn-main btn-300">
           Update
-        </button>
-        {/* <button
-          onClick={() => setToggler(false)}
-          className="btn btn-main btn-300"
-        >
-          Cancel
-        </button> */}
-      </div>
+        </button>      </div>
     </section>
   );
 }
