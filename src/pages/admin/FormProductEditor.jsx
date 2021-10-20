@@ -6,7 +6,7 @@ import ImageUploader from "./ImageUploader";
 import form from "../../utils/form.json";
 import FormItem from "../../shared/FormItem";
 
-export default function FormProductEditor({ onUpdate, item }) {
+export default function FormProductEditor({ onUpdate, item, history }) {
   const { id, title, imageURL, description, ingredients, price } = item;
   const [productName, setProductName] = useState(title);
   const [productImageURL, setProductImageURL] = useState(imageURL);
@@ -28,7 +28,6 @@ export default function FormProductEditor({ onUpdate, item }) {
   }
   return (
     <section className="section-admin">
-
       <form className="masonry">
         <div className="right-content ">
           <FormItem
@@ -72,7 +71,14 @@ export default function FormProductEditor({ onUpdate, item }) {
       <div className="admin-options">
         <button onClick={updateProduct} className="btn btn-main btn-300">
           Update
-        </button>      </div>
+        </button>
+        <button
+          className="btn btn-main btn-300"
+          onClick={() => history.goBack()}
+        >
+          Cancel
+        </button>
+      </div>
     </section>
   );
 }

@@ -57,10 +57,7 @@ export default function FormCategoryEditor({ onUpdate, item, history }) {
         <button onClick={updateCategory} className="btn btn-main btn-300">
           Update
         </button>
-        <button
-          className="btn btn-main btn-300"
-          onClick={() => history.goBack()}
-        >
+        <button className="btn btn-main btn-300" onClick={() => history.goBack()}>
           Cancel
         </button>
       </div>

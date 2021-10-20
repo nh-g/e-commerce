@@ -26,8 +26,6 @@ export default function CategoryPage() {
     })[0];
   }
 
-
-
   return (
     <>
       {categories.loading === true && <Spinner />}
@@ -35,14 +33,15 @@ export default function CategoryPage() {
       {!categories.loading && categories.error === null && (
         <main className="page-category">
           <section className="page-hero">
-            <ButtonAdd
-              label="Product"
-              toggler={toggler}
-              setToggler={setToggler}
-            />
+            <div className="admin-options">
+              <ButtonAdd
+                label="Product"
+                toggler={toggler}
+                setToggler={setToggler}
+              />
 
-
-            <Delete path="categories" dataSelected={currentCategory} />
+              <Delete path="categories" dataSelected={currentCategory} />
+            </div>
 
             <h1>{currentCategory.title}</h1>
             <small className="section-description">
