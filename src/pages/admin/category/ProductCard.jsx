@@ -1,19 +1,22 @@
 // NPM packages
+import { RiEdit2Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 // Project files
 import Placeholder from "../../../assets/images/flame.jpg";
 import { useStateValue } from "../../../state/StateProvider";
 import Delete from "../Delete";
-import Edit from '../ButtonEdit';
+import ButtonEdit from '../ButtonEdit';
 
 export default function HomeProduct({ item }) {
   // Properties
-  const { id, title, imageURL, price, rating, categoryID, description } = item;
+  const { id, title, imageURL, price, rating, categoryID } = item;
   const Image =
     imageURL === "" || imageURL === null || imageURL === undefined
       ? Placeholder
       : imageURL;
+
 
   // Global State
   const [{ cart }, dispatch] = useStateValue();
@@ -39,7 +42,14 @@ export default function HomeProduct({ item }) {
         <div className="product__info">
           <p>{title}</p>
           <div className="admin-options">
-            <Edit />
+            <ButtonEdit
+              to={`edit-product/${id}`}
+            />
+            {/* <Link to="" className="btn btn-main btn-32 edit">
+              <h4>
+                <RiEdit2Fill /> Edit
+              </h4>
+            </Link> */}
 
             <Delete path="products" dataSelected={item} />
           </div>

@@ -17,7 +17,7 @@ export default function ItemCategory({ item }) {
 
   return (
     <div className="masonry">
-      <Link to={`/admin/menu/${id}`}>
+      <Link to={`/admin/${id}`}>
         <div className="left-content">
           <img src={Image} alt="" />
         </div>
@@ -31,7 +31,7 @@ export default function ItemCategory({ item }) {
 
         <h2>{title.toUpperCase()}</h2>
         <p>{description}</p>
-        <Link to={`/admin/menu/${id}`}>
+        <Link to={`/admin/${id}`}>
           <span className="cta">View {title.toUpperCase()}</span>
         </Link>
       </div>

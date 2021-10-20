@@ -1,6 +1,12 @@
 // NPM packages
 import { collection, doc } from "firebase/firestore/lite"; // normal methods
-import { addDoc, updateDoc, getDocs, deleteDoc } from "firebase/firestore/lite"; // async methods
+import {
+  addDoc,
+  updateDoc,
+  getDocs,
+  deleteDoc,
+  getDoc,
+} from "firebase/firestore/lite"; // async methods
 import firestoreReference from "./firebase";
 
 // Create file
@@ -34,4 +40,18 @@ export async function deleteDocument(path, id) {
   const docReference = doc(firestoreReference, path, id);
   await deleteDoc(docReference);
   console.log("Document deleted ");
+}
+
+// Get document
+export async function getDocument(path, id) {
+  const docRef = doc(firestoreReference, path, id);
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    const document = docSnap.data();
+    return { id: id, ...document };
+  } else {
+    // doc.data() will be undefined in this case
+    console.log("No such document!");
+  }
 }

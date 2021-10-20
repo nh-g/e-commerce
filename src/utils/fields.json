@@ -1,0 +1,12 @@
+[
+  {
+    "key": "title",
+    "placeholder": "Enter Title",
+    "type": "text"
+  },
+  {
+    "key": "description",
+    "placeholder": "Enter Description",
+    "type": "text"
+  }
+]

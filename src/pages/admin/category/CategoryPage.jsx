@@ -18,11 +18,15 @@ export default function CategoryPage() {
   const [toggler, setToggler] = useState(false);
   const currentCategory = getSelectedCategories(categories.data, categoryID);
 
+  console.log("Category Page CATEGORIES", categories.data);
+
   function getSelectedCategories(array, key) {
     return array.filter((item) => {
       return item.id === key;
     })[0];
   }
+
+
 
   return (
     <>
@@ -31,9 +35,13 @@ export default function CategoryPage() {
       {!categories.loading && categories.error === null && (
         <main className="page-category">
           <section className="page-hero">
+            <ButtonAdd
+              label="Product"
+              toggler={toggler}
+              setToggler={setToggler}
+            />
 
-            <ButtonAdd label = "Product" toggler={toggler} setToggler={setToggler}/>
-            
+
             <Delete path="categories" dataSelected={currentCategory} />
 
             <h1>{currentCategory.title}</h1>

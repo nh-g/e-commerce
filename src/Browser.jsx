@@ -12,7 +12,8 @@ import AdminMenu from "./pages/admin/menu/Categories";
 import AdminCategoryPage from "./pages/admin/category/CategoryPage";
 import CategoryPage from "./pages/category/CategoryPage";
 import ProductPage from "./pages/products/ProductPage";
-
+import EditCategory from "./pages/admin/EditCategory";
+import EditProduct from "./pages/admin/EditProduct";
 export default function Browser() {
   return (
     <BrowserRouter>
@@ -28,9 +29,12 @@ export default function Browser() {
 
           <Route path="/menu/:categoryID/:productID" component={ProductPage} />
 
-          <Route path="/admin/menu/:categoryID" component={AdminCategoryPage} />
+          <Route exact path="/admin/:categoryID" component={AdminCategoryPage} />
 
-          {/* <Route path="admin/edit/:categoryID" component={EditCategory} /> */}
+          {/* <Route path="/admin/edit/:categoryID" component={EditCategory} /> */}
+          <Route exact path="/admin/edit-product/:productID"
+            component={EditProduct}
+          />
 
           <Route exact path="/admin" component={AdminMenu} />
 
