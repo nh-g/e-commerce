@@ -25,7 +25,7 @@ export default function ItemCategory({ item }) {
 
       <div className="right-content ">
         <div className="admin-options">
-          <ButtonEdit to={`admin/edit/${id}`} />
+          <ButtonEdit to={`admin/edit-category/${id}`} />
           <Delete path="categories" dataSelected={item} />
         </div>
 

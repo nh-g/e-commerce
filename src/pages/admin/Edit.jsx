@@ -5,15 +5,15 @@ import { useHistory, useParams } from "react-router-dom";
 // Project files
 import { getDocument, updateDocument } from "../../scripts/firebase/fireStore";
 
-export default function EditProduct({ FormEditor }) {
+export default function EditProduct({ FormEditor, path }) {
   const history = useHistory();
-
-  console.log("history", history);
   const [item, setItem] = useState();
   const [status, setStatus] = useState(0); // 0: loading, 1: loaded, 2: error
-  const { productID: itemID } = useParams();
-  const path = "products";
-  const fetchData = useCallback(async (path) => {
+
+  const { itemID } = useParams();
+
+  const fetchData = useCallback(
+    async (path) => {
       try {
         const selectedItem = await getDocument(path, itemID);
         setItem(selectedItem);
@@ -21,10 +21,13 @@ export default function EditProduct({ FormEditor }) {
       } catch {
         setStatus(2);
       }
-    },[itemID]
+    },
+    [itemID]
   );
 
-  useEffect(() => {fetchData(path);}, [fetchData, path]);
+  useEffect(() => {
+    fetchData(path);
+  }, [fetchData, path]);
 
   async function onUpdate(selectedItem) {
     await updateDocument(path, selectedItem.id, selectedItem);
@@ -34,17 +37,11 @@ export default function EditProduct({ FormEditor }) {
 
   return (
     <div className="admin-container">
-      <h1>Update Product</h1>
+      <h2>Edit Page</h2>
       {status === 0 && <p>Loading</p>}
       {status === 1 && (
         <>
-          <FormEditor onUpdate={onUpdate} item={item} />
-          <button
-            className="btn btn-main btn-300"
-            onClick={() => history.goBack()}
-          >
-            Cancel
-          </button>
+          <FormEditor onUpdate={onUpdate} item={item} history = {history}/>
         </>
       )}
       {status === 2 && <p>Error</p>}

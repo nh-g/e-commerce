@@ -15,6 +15,7 @@ import ProductPage from "./pages/products/ProductPage";
 import EditCategory from "./pages/admin/EditCategory";
 import Edit from "./pages/admin/Edit";
 import FormProductEditor from "./pages/admin/FormProductEditor";
+import FormCategoryEditor from "./pages/admin/FormCategoryEditor"
 export default function Browser() {
   return (
     <BrowserRouter>
@@ -36,9 +37,12 @@ export default function Browser() {
             component={AdminCategoryPage}
           />
 
-          {/* <Route path="/admin/edit/:categoryID" component={EditCategory} /> */}
-          <Route exact path="/admin/edit-product/:productID">
-            <Edit FormEditor={FormProductEditor} />
+          <Route exact path="/admin/edit-category/:itemID">
+            <Edit FormEditor={FormCategoryEditor} path="categories" />
+          </Route>
+
+          <Route exact path="/admin/edit-product/:itemID">
+            <Edit FormEditor={FormProductEditor} path="products" />
           </Route>
 
           <Route exact path="/admin" component={AdminMenu} />

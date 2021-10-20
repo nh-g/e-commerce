@@ -41,11 +41,9 @@ export default function HomeProduct({ item }) {
       <Link to={`./${categoryID}/${id}`}>
         <div className="product__info">
           <p>{title}</p>
+          
           <div className="admin-options">
-            <ButtonEdit
-              to={`edit-product/${id}`}
-            />
-
+            <ButtonEdit to={`edit-product/${id}`}/>
             <Delete path="products" dataSelected={item} />
           </div>
 

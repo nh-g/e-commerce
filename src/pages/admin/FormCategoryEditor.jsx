@@ -6,7 +6,7 @@ import ImageUploader from "./ImageUploader";
 import form from "../../utils/form.json";
 import FormItem from "../../shared/FormItem";
 
-export default function FormCategoryEditor({ onUpdate, item }) {
+export default function FormCategoryEditor({ onUpdate, item, history }) {
   const { id, title, imageURL, description } = item;
   const [categoryName, setCategoryName] = useState(title);
   const [categoryImageURL, setCategoryImageURL] = useState(imageURL);
@@ -24,7 +24,6 @@ export default function FormCategoryEditor({ onUpdate, item }) {
   }
   return (
     <section className="section-admin">
-
       <form className="masonry">
         <div className="right-content ">
           <FormItem
@@ -57,6 +56,12 @@ export default function FormCategoryEditor({ onUpdate, item }) {
       <div className="admin-options">
         <button onClick={updateCategory} className="btn btn-main btn-300">
           Update
+        </button>
+        <button
+          className="btn btn-main btn-300"
+          onClick={() => history.goBack()}
+        >
+          Cancel
         </button>
       </div>
     </section>
