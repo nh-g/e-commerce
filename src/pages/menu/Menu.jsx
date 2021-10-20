@@ -12,7 +12,14 @@ export default function Menu() {
 
   return (
     <div className="menu">
-      <h1>MENU</h1>
+      <section className="page-hero">
+        <h1>MENU</h1>
+
+        <small className="section-description">
+          Award-winning menu with regional inspiration, featuring smoked meats,
+          homemade sauces, and from scratch sides
+        </small>
+      </section>
       <MappingList getData={categoriesData} Component={CategoryMasonry} />
     </div>
   );
