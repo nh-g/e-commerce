@@ -12,7 +12,6 @@ import AdminMenu from "./pages/admin/menu/Categories";
 import AdminCategoryPage from "./pages/admin/category/CategoryPage";
 import CategoryPage from "./pages/category/CategoryPage";
 import ProductPage from "./pages/products/ProductPage";
-import EditCategory from "./pages/admin/EditCategory";
 import Edit from "./pages/admin/Edit";
 import FormProductEditor from "./pages/admin/FormProductEditor";
 import FormCategoryEditor from "./pages/admin/FormCategoryEditor"

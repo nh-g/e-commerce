@@ -1,8 +1,8 @@
 // NPM Packages
 import { useState } from "react";
-
 import { useParams, NavLink } from "react-router-dom";
 
+// Project files
 import useFetch from "../../../hooks/useFetch";
 import Products from "./Products";
 import ButtonBack from "../../../shared/ButtonBack";
@@ -11,6 +11,7 @@ import BoxError from "../../../shared/BoxError";
 import Delete from "../Delete";
 import CreateProduct from "../CreateProducts";
 import ButtonAdd from "../../../shared/ButtonAdd";
+import ButtonEdit from "../ButtonEdit";
 
 export default function CategoryPage() {
   const categories = useFetch("categories");
@@ -39,6 +40,7 @@ export default function CategoryPage() {
                 toggler={toggler}
                 setToggler={setToggler}
               />
+              <ButtonEdit to={`edit-category/${categoryID}`} />
 
               <Delete path="categories" dataSelected={currentCategory} />
             </div>

@@ -7,7 +7,7 @@ export default function Delete({ dataSelected, path }) {
   function handleDelete() {
     if (window.confirm("Are you sure ?")) {
       deleteDocument(path, dataSelected.id);
-      alert("Successfully deleted");
+      alert(`Successfully deleted ${dataSelected.title}`);
     }
   }
 
