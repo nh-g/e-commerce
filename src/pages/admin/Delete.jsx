@@ -12,7 +12,6 @@ export default function Delete({ dataSelected, path }) {
   }
 
   return (
-    <form>
       <button
         className="btn btn-main btn-32 delete"
         disabled={dataSelected === ""}
@@ -22,6 +21,5 @@ export default function Delete({ dataSelected, path }) {
           <RiDeleteBinLine /> Delete
         </h4>
       </button>
-    </form>
   );
 }
