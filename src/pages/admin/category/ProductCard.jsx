@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Placeholder from "../../../assets/images/flame.jpg";
 import { useStateValue } from "../../../state/StateProvider";
 import Delete from "../Delete";
-import Edit from '../Edit';
+import Edit from '../ButtonEdit';
 
 export default function HomeProduct({ item }) {
   // Properties

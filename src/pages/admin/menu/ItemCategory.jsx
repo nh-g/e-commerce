@@ -1,7 +1,7 @@
 // NPM Packages
 import { Link } from "react-router-dom";
 import Delete from "../Delete";
-import Edit from '../Edit';
+import ButtonEdit from '../ButtonEdit';
 
 // Project file
 import Placeholder from "../../../assets/images/flame.jpg";
@@ -25,8 +25,8 @@ export default function ItemCategory({ item }) {
 
       <div className="right-content ">
         <div className="admin-options">
-          <Edit /> 
-          <Delete path = "categories" dataSelected={item} />
+          <ButtonEdit to={`admin/edit/${id}`} />
+          <Delete path="categories" dataSelected={item} />
         </div>
 
         <h2>{title.toUpperCase()}</h2>

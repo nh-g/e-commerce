@@ -2,14 +2,12 @@
 import { RiDeleteBinLine } from "react-icons/ri";
 
 // Project files
-import { deleteElement } from "../../hooks/useCRUD";
-
+import { deleteDocument } from "../../scripts/firebase/fireStore";
 export default function Delete({ dataSelected, path }) {
-
-    function handleDelete() {
+  function handleDelete() {
     if (window.confirm("Are you sure ?")) {
-        deleteElement(path, dataSelected.id);
-        alert("Successfully deleted");
+      deleteDocument(path, dataSelected.id);
+      alert("Successfully deleted");
     }
   }
 
@@ -21,8 +19,7 @@ export default function Delete({ dataSelected, path }) {
         onClick={handleDelete}
       >
         <h4>
-          <RiDeleteBinLine
-          /> Delete
+          <RiDeleteBinLine /> Delete
         </h4>
       </button>
     </form>

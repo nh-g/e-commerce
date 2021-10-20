@@ -36,7 +36,7 @@ export default function Browser() {
 
           <Route path="/login" component={Login} />
 
-          <Route path="/checkout" component={Checkout}/>
+          <Route path="/checkout" component={Checkout} />
         </div>
       </Switch>
 

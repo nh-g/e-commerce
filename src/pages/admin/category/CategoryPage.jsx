@@ -13,12 +13,9 @@ import CreateProduct from "../CreateProducts";
 import ButtonAdd from "../../../shared/ButtonAdd";
 
 export default function CategoryPage() {
-  // Hooks
   const categories = useFetch("categories");
   const { categoryID } = useParams();
   const [toggler, setToggler] = useState(false);
-
-  //Const
   const currentCategory = getSelectedCategories(categories.data, categoryID);
 
   function getSelectedCategories(array, key) {
