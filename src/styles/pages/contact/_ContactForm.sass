@@ -1,0 +1,59 @@
+#contact-form 
+    width: 80%
+    margin: 0 auto
+    padding: var(--space-big)
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px
+    margin-bottom: 1rem
+
+
+#contact-form  input, textarea 
+    width: 100%
+    background-color: $dark
+    border: 0
+    padding: 10px 20px
+    box-sizing: border-box
+    margin-bottom: 15px
+    font-size: 1rem
+
+
+#contact-form  textarea 
+    height: 9rem
+    resize: vertical
+
+
+#contact-form p 
+    display: none
+    text-align: center
+    color: $silver
+    background-color: $black
+    padding: 10px
+    border: 0
+
+
+#contact-form .visible 
+    display: block
+
+.date-time 
+    display: grid
+    grid-template-columns: 60% 40%
+
+@media (min-width: 768px) 
+    #contact-form 
+        width: 50%
+    
+
+@media (min-width: 1600px) 
+    #contact-form 
+        width: 40%
+        max-width: 960px
+    
+
+
+@media (max-width: 320px) 
+    #contact-form 
+        width: fit-content
+    
+    #contact-form  input, textarea 
+        padding: 10px 10px
+
+

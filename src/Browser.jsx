@@ -16,6 +16,8 @@ import Edit from "./pages/admin/Edit";
 import FormProductEditor from "./pages/admin/FormProductEditor";
 import FormCategoryEditor from "./pages/admin/FormCategoryEditor";
 import AdminProductPage from "./pages/admin/product/ProductPage";
+import ContactPage from "./pages/contact/Contact";
+
 export default function Browser() {
   return (
     <BrowserRouter>
@@ -31,7 +33,11 @@ export default function Browser() {
 
           <Route path="/menu/:categoryID/:productID" component={ProductPage} />
 
-          <Route exact path="/admin/:categoryID/:productID" component={AdminProductPage} />
+          <Route
+            exact
+            path="/admin/:categoryID/:productID"
+            component={AdminProductPage}
+          />
 
           <Route
             exact
@@ -52,6 +58,8 @@ export default function Browser() {
           <Route path="/login" component={Login} />
 
           <Route path="/checkout" component={Checkout} />
+
+          <Route path="/contact" component={ContactPage} />
         </div>
       </Switch>
 
