@@ -29,18 +29,13 @@ export default function HomeProduct({ item }) {
             <strong>{price}</strong>
           </p>
           <Ingredients product={item} />
-          <div className="product__rating">
-            {/* {Array(rating)
-            .fill()
-            .map((_, i) => (
-              // <p>⭐️ </p>
-              <p>★</p>
-            ))} */}
-          </div>
+          <div className="product__rating"></div>
         </Link>
       </div>
       <br />
-      <img src={Image} alt="bbq food" />
+      <Link to={`/admin/${categoryID}/${id}`}>
+        <img src={Image} alt="bbq food" />
+      </Link>
     </div>
   );
 }

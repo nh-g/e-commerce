@@ -33,9 +33,6 @@ export default function ProductPage() {
             <div className="admin-options">
               <ButtonEdit to={`/edit-product/${product.id}`} />
               <Delete path="products" dataSelected={product} />
-              <div className="price">
-                <h3> ${product.price} </h3>
-              </div>
             </div>
 
             <h1>{product.title}</h1>
@@ -47,7 +44,13 @@ export default function ProductPage() {
               <img className="product-image" alt="img" src={product.imageURL} />
             </div>
             <div className="right-content">
+              <p className="product__price">
+                <small>$</small>
+                <strong>{product.price}</strong>
+              </p>
+
               <p>{product.description}</p>
+
               <Ingredients product={product} />
               <br />
               <AddToCart item={product} />

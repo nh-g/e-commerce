@@ -1,6 +1,5 @@
 // NPM packages
 import { RiEdit2Fill } from "react-icons/ri";
-import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
 export default function ButtonEdit({to}) {
