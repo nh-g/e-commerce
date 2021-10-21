@@ -12,11 +12,9 @@ export default function ButtonEdit({to}) {
 
   return (
     <button className="btn btn-main btn-32 edit" onClick={handleClick}>
-      {/* <Link to={to}> */}
       <h4>
         <RiEdit2Fill /> Edit
       </h4>
-      {/* </Link> */}
     </button>
   );
 }

@@ -3,13 +3,13 @@ import { useParams } from "react-router-dom";
 
 // Project files
 import useFetch from "../../../hooks/useFetch";
-import Description from "../../products/Description";
 import Ingredients from "../../products/Ingredients";
 import ButtonBack from "../../../shared/ButtonBack";
 import BoxError from "../../../shared/BoxError";
 import Spinner from "../../../shared/Spinner";
 import AddToCart from "../../../shared/AddToCart";
 import ButtonEdit from "../ButtonEdit";
+import Delete from "../Delete";
 export default function ProductPage() {
   // Hooks
   const products = useFetch("products");
@@ -30,7 +30,16 @@ export default function ProductPage() {
       {!products.loading && products.error === null && (
         <main className="page">
           <section className="page-hero">
-            <Description product={product} />
+            <div className="admin-options">
+              <ButtonEdit to={`/edit-product/${product.id}`} />
+              <Delete path="products" dataSelected={product} />
+              <div className="price">
+                <h3> ${product.price} </h3>
+              </div>
+            </div>
+
+            <h1>{product.title}</h1>
+            <small>{product.description}</small>
           </section>
 
           <div className="masonry">
@@ -45,7 +54,7 @@ export default function ProductPage() {
             </div>
           </div>
           <br />
-            <ButtonBack label="Go back to Category" />
+          <ButtonBack label="Go back to Category" />
         </main>
       )}
     </>

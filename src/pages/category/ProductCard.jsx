@@ -15,7 +15,6 @@ export default function ProductCard({ item }) {
       : imageURL;
 
 
-  console.log("INGREDIENTS", item);
 
   return (
     <div className="product">

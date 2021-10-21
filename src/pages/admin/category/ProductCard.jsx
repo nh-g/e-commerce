@@ -17,7 +17,7 @@ export default function HomeProduct({ item }) {
   return (
     <div className="product">
       <div className="admin-options">
-        <ButtonEdit to={`edit-product/${id}`} />
+        <ButtonEdit to={`/edit-product/${id}`} />
         <Delete path="products" dataSelected={item} />
       </div>
       <div className="product__info">

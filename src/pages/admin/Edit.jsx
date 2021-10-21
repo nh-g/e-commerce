@@ -5,7 +5,7 @@ import { useHistory, useParams } from "react-router-dom";
 // Project files
 import { getDocument, updateDocument } from "../../scripts/firebase/fireStore";
 
-export default function EditProduct({ FormEditor, path }) {
+export default function Edit({ FormEditor, path }) {
   const history = useHistory();
   const [item, setItem] = useState();
   const [status, setStatus] = useState(0); // 0: loading, 1: loaded, 2: error
@@ -34,6 +34,8 @@ export default function EditProduct({ FormEditor, path }) {
     alert(`${item.title} has been updated`);
     history.goBack();
   }
+
+  console.log("EDIT CATEGORY", item)
 
   return (
     <div className="admin-container">

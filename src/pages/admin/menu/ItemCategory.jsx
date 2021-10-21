@@ -17,15 +17,13 @@ export default function ItemCategory({ item }) {
 
   return (
     <div className="masonry">
-      <Link to={`/admin/${id}`}>
         <div className="left-content">
           <img src={Image} alt="" />
         </div>
-      </Link>
 
       <div className="right-content ">
         <div className="admin-options">
-          <ButtonEdit to={`admin/edit-category/${id}`} />
+          <ButtonEdit to={`/edit-category/${id}`} />
           <Delete path="categories" dataSelected={item} />
         </div>
 

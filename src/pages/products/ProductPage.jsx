@@ -1,9 +1,8 @@
 // NPM packages
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // Project files
 import useFetch from "../../hooks/useFetch";
-import Description from "./Description";
 import Ingredients from "./Ingredients";
 
 import ButtonBack from '../../shared/ButtonBack'
@@ -32,7 +31,8 @@ export default function ProductPage() {
       {!products.loading && products.error === null && (
         <main className="page">
           <section className="page-hero">
-            <Description product={product} />
+            <h1>{product.title}</h1>
+            <small>{product.description}</small>
           </section>
 
           <div className="masonry">
@@ -47,7 +47,7 @@ export default function ProductPage() {
             </div>
           </div>
           <br />
-            <ButtonBack label="Go back to Category" />
+          <ButtonBack label="Go back to Category" />
         </main>
       )}
     </>

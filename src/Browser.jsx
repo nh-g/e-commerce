@@ -31,7 +31,7 @@ export default function Browser() {
 
           <Route path="/menu/:categoryID/:productID" component={ProductPage} />
 
-          {/* <Route exact path="/admin/:categoryID/:productID" component={AdminProductPage} /> */}
+          <Route exact path="/admin/:categoryID/:productID" component={AdminProductPage} />
 
           <Route
             exact
@@ -39,11 +39,11 @@ export default function Browser() {
             component={AdminCategoryPage}
           />
 
-          <Route exact path="/admin/edit-category/:itemID">
+          <Route path="/edit-category/:itemID">
             <Edit FormEditor={FormCategoryEditor} path="categories" />
           </Route>
 
-          <Route exact path="/admin/edit-product/:itemID">
+          <Route path="/edit-product/:itemID">
             <Edit FormEditor={FormProductEditor} path="products" />
           </Route>
 
