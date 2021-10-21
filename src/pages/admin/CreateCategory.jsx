@@ -36,10 +36,11 @@ export default function CreateCategory({ setToggler }) {
   return (
     <section className="section-admin">
       <h2>Create Category</h2>
-      <p className="admin-instructions">All fields are required *</p>
 
       <form className="masonry">
         <div className="right-content ">
+          <p className="admin-instructions">All fields are required *</p>
+
           <FormItem
             settings={form.title.settings}
             hook={[title, setTitle]}

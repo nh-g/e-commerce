@@ -18,7 +18,8 @@
   max-width: 1500px
 
   .product
-    width: 100%
+    @media only screen and (min-width:$media-larger-phablet)
+      width: 100%
 
 .home__row 
   display: flex
@@ -26,7 +27,7 @@
   margin-left: 5px
   margin-right: 5px
 
-@media only screen and (max-width:500px)
+@media only screen and (max-width:$media-larger-phablet)
   .home__row 
     display: grid
 

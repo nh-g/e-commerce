@@ -38,7 +38,7 @@ export default function NavigationBar() {
       <div className="header__nav">
         <Link className="header__option" to="/menu">
           Menu
-          <img src={flameIcon} alt="" style={{ height: "10px" }} />
+          {/* <img src={flameIcon} alt="" style={{ height: "10px" }} /> */}
         </Link>
 
         <Link className="header__option" to="/admin">

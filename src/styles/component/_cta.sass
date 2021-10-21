@@ -149,7 +149,11 @@ button
     background: $red
 
 .admin-options
-  display: flex
+  display: grid
+  @media screen and (min-width: $media-larger-mobile)
+    grid-template-columns: 1fr 1fr 
+
+
   
 .btn-300
   width: 300px
