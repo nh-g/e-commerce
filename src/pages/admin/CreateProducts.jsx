@@ -31,7 +31,7 @@ export default function CreateProduct({ category, setToggler }) {
         imageURL: imageURL,
       };
 
-      createDocument(firestoreReference, "products", newProduct);
+      createDocument("products", newProduct);
       setToggler(false);
   }
 

@@ -15,6 +15,11 @@ export default function CreateCategory({ setToggler }) {
   const [imageURL, setImageURL] = useState("");
 
   // Methods
+
+  async function onCreateCategory(category) {
+    category.id = await createDocument("categories", category);
+  }
+
   function onSubmit(event) {
     event.preventDefault();
 
@@ -24,7 +29,7 @@ export default function CreateCategory({ setToggler }) {
       imageURL: imageURL,
     };
 
-    createDocument(firestoreReference, "categories", newCategory);
+    onCreateCategory(newCategory);
     setToggler(false);
   }
 
