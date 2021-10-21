@@ -36,13 +36,13 @@ export default function Browser() {
             component={AdminCategoryPage}
           />
 
-          {/* <Route exact path="/admin/edit-category/:itemID">
+          <Route exact path="/admin/edit-category/:itemID">
             <Edit FormEditor={FormCategoryEditor} path="categories" />
           </Route>
 
           <Route exact path="/admin/edit-product/:itemID">
             <Edit FormEditor={FormProductEditor} path="products" />
-          </Route> */}
+          </Route>
 
           <Route exact path="/admin" component={AdminMenu} />
 
@@ -52,7 +52,7 @@ export default function Browser() {
         </div>
       </Switch>
 
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

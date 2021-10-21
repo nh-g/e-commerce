@@ -3,13 +3,13 @@ import React from "react";
 export default function Description({ product }) {
   return (
     <section className="section-product_description">
-      <h2>{product.title}</h2>
       <div className="price">
-        <h2>{product.price} Kr</h2>
+        <h3> ${product.price} </h3>
       </div>
 
-      <img alt="img" src={product.imageURL} />
-      <p>{product.description}</p>
+      <h1>{product.title}</h1>
+
+      <small>{product.description}</small>
     </section>
   );
 }

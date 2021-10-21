@@ -1,13 +1,11 @@
 // NPM packages
-import { RiEdit2Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 // Project files
 import Placeholder from "../../../assets/images/flame.jpg";
-import { useStateValue } from "../../../state/StateProvider";
 import Delete from "../Delete";
 import ButtonEdit from '../ButtonEdit';
+import AddToCart from "../../../shared/AddToCart";
 
 export default function HomeProduct({ item }) {
   // Properties
@@ -17,28 +15,9 @@ export default function HomeProduct({ item }) {
       ? Placeholder
       : imageURL;
 
-
-  // Global State
-  const [{ cart }, dispatch] = useStateValue();
-
-  // Methods
-  const addToCart = () => {
-    // dispatch the item into the data layer
-    dispatch({
-      type: "ADD_TO_CART",
-      item: {
-        id: id,
-        title: title,
-        imageURL: imageURL,
-        price: price,
-        rating: rating,
-      },
-    });
-  };
-
   return (
     <div className="product">
-      <Link to={`./${categoryID}/${id}`}>
+      <Link to={`/menu/${categoryID}/${id}`}>
         <div className="product__info">
           <p>{title}</p>
           
@@ -63,9 +42,8 @@ export default function HomeProduct({ item }) {
         <img src={Image} alt="bbq food" />
       </Link>
 
-      <span className="cta" onClick={addToCart}>
-        Add to Cart
-      </span>
+      <AddToCart item ={item}/>
+
     </div>
   );
 }

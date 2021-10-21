@@ -27,7 +27,7 @@ export default function CategoryPage() {
       {categories.loading === true && <Spinner />}
       {categories.error !== null && <BoxError />}
       {!categories.loading && categories.error === null && (
-        <main className="page-category">
+        <main className="page">
           <section className="page-hero">
             <h1>{currentCategory.title}</h1>
             <small className="section-description">

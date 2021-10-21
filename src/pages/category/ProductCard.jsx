@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 // Project files
 import Placeholder from "../../assets/images/flame.jpg";
-import { useStateValue } from "../../state/StateProvider";
+import AddToCart from "../../shared/AddToCart";
+import Ingredients from "../products/Ingredients";
 
 export default function HomeProduct({ item }) {
   // Properties
@@ -12,24 +13,6 @@ export default function HomeProduct({ item }) {
     imageURL === "" || imageURL === null || imageURL === undefined
       ? Placeholder
       : imageURL;
-
-  // Global State
-  const [{ cart }, dispatch] = useStateValue();
-
-  // Methods
-  const addToCart = () => {
-    // dispatch the item into the data layer
-    dispatch({
-      type: "ADD_TO_CART",
-      item: {
-        id: id,
-        title: title,
-        imageURL: imageURL,
-        price: price,
-        rating: rating,
-      },
-    });
-  };
 
   return (
     <div className="product">
@@ -40,6 +23,7 @@ export default function HomeProduct({ item }) {
             <small>$</small>
             <strong>{price}</strong>
           </p>
+          <Ingredients product ={item}/>
           <div className="product__rating">
             {/* {Array(rating)
             .fill()
@@ -52,9 +36,7 @@ export default function HomeProduct({ item }) {
         <img src={Image} alt="bbq food" />
       </Link>
 
-      <span className="cta" onClick={addToCart}>
-        Add to Cart
-      </span>
+      <AddToCart item ={item}/>
     </div>
   );
 }
