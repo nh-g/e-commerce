@@ -33,15 +33,17 @@ export default function SearchResult() {
 
   return (
     <div id="results" className="page">
+      <header>
+        <h2>
+          We found {searchResults.length} products that matched your search "
+          {query}"
+        </h2>
+      </header>
       <div className="section-products">
         {searchResults.length > 0 ? (
-          (<h2>
-            We found {searchResults.length} products that matched your search "
-            {query}"
-          </h2>)(FilteredProducts)
+          FilteredProducts
         ) : (
           <h2 style={{ textAlign: "center" }}>
-            Sorry we cannot find the product that matched your search "{query}"
             <Link to="./menu">
               <button className="btn btn-main btn-300">
                 <h4>Go To Menu </h4>
