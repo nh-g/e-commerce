@@ -1,10 +1,12 @@
 // NPM packages
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 // Project files
 import useFetch from "../hooks/useFetch";
 import ButtonBack from "../shared/ButtonBack";
 import ProductCard from "./category/ProductCard";
+import { ArrowForward } from "@material-ui/icons";
+import arrow from "../assets/images/arrow-right-circle.svg";
 export default function SearchResult() {
   const { query } = useParams();
 
@@ -31,18 +33,21 @@ export default function SearchResult() {
 
   return (
     <div id="results" className="page">
-      <header>
-        <h2>
-          We found {searchResults.length} products that matched your search "{query}"
-        </h2>
-      </header>
-
       <div className="section-products">
         {searchResults.length > 0 ? (
-          FilteredProducts
+          (<h2>
+            We found {searchResults.length} products that matched your search "
+            {query}"
+          </h2>)(FilteredProducts)
         ) : (
           <h2 style={{ textAlign: "center" }}>
-            Sorry we cannot find the product.
+            Sorry we cannot find the product that matched your search "{query}"
+            <Link to="./menu">
+              <button className="btn btn-main btn-300">
+                <h4>Go To Menu </h4>
+                <img className="icon-btn" src={arrow} alt="back" />
+              </button>
+            </Link>
           </h2>
         )}
       </div>

@@ -14,19 +14,22 @@ export default function SearchBar() {
   function Search(event) {
     event.preventDefault();
     history.push(`/results/${query}`);
+    setQuery("");
   }
 
+
+
   return (
-      <form onSubmit={Search} className="header__search">
-        <input
-          type="text"
-          placeholder=""
-          value={query}
-          onChange={(event) => setQuery(event.target.value.replace(/\s/g, ""))}
-          className="header__searchInput"
-          required
-        />
-        <SearchIcon className="searchIcon" />
-      </form>
+    <form onSubmit={Search} className="header__search">
+      <input
+        type="text"
+        placeholder=""
+        value={query}
+        onChange={(event) => setQuery(event.target.value.replace(/\s/g, ""))}
+        className="header__searchInput"
+        required
+      />
+      <SearchIcon className="searchIcon" />
+    </form>
   );
 }
