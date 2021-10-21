@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 import Placeholder from "../../../assets/images/flame.jpg";
 import Delete from "../Delete";
 import ButtonEdit from '../ButtonEdit';
-import AddToCart from "../../../shared/AddToCart";
-
+import Ingredients from "../../products/Ingredients";
 export default function HomeProduct({ item }) {
   // Properties
   const { id, title, imageURL, price, rating, categoryID } = item;
@@ -17,19 +16,19 @@ export default function HomeProduct({ item }) {
 
   return (
     <div className="product">
-      <Link to={`/menu/${categoryID}/${id}`}>
-        <div className="product__info">
+      <div className="admin-options">
+        <ButtonEdit to={`edit-product/${id}`} />
+        <Delete path="products" dataSelected={item} />
+      </div>
+      <div className="product__info">
+        <Link to={`/admin/${categoryID}/${id}`}>
           <p>{title}</p>
-          
-          <div className="admin-options">
-            <ButtonEdit to={`edit-product/${id}`}/>
-            <Delete path="products" dataSelected={item} />
-          </div>
 
           <p className="product__price">
             <small>$</small>
             <strong>{price}</strong>
           </p>
+          <Ingredients product={item} />
           <div className="product__rating">
             {/* {Array(rating)
             .fill()
@@ -38,12 +37,10 @@ export default function HomeProduct({ item }) {
               <p>★</p>
             ))} */}
           </div>
-        </div>
-        <img src={Image} alt="bbq food" />
-      </Link>
-
-      <AddToCart item ={item}/>
-
+        </Link>
+      </div>
+      <br />
+      <img src={Image} alt="bbq food" />
     </div>
   );
 }

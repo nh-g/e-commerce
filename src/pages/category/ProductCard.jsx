@@ -23,7 +23,7 @@ export default function HomeProduct({ item }) {
             <small>$</small>
             <strong>{price}</strong>
           </p>
-          <Ingredients product ={item}/>
+          {/* <Ingredients product ={item}/> */}
           <div className="product__rating">
             {/* {Array(rating)
             .fill()
