@@ -17,6 +17,7 @@ import FormProductEditor from "./pages/admin/FormProductEditor";
 import FormCategoryEditor from "./pages/admin/FormCategoryEditor";
 import AdminProductPage from "./pages/admin/product/ProductPage";
 import ContactPage from "./pages/contact/Contact";
+import SearchResult from "./pages/SearchResult";
 
 export default function Browser() {
   return (
@@ -60,6 +61,8 @@ export default function Browser() {
           <Route path="/checkout" component={Checkout} />
 
           <Route path="/contact" component={ContactPage} />
+
+          <Route path="/results/:query" component={SearchResult} />
         </div>
       </Switch>
 

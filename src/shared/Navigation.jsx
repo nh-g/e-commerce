@@ -1,5 +1,4 @@
 // NPM Packages
-import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
@@ -8,7 +7,7 @@ import { signOut } from "firebase/auth";
 import flameIcon from "../assets/images/brand/flame.svg";
 import { useStateValue } from "../state/StateProvider";
 import { authentication } from "../scripts/firebase/authentication-firebase";
-
+import SearchBar from './SearchBar';
 export default function NavigationBar() {
   // Global state
   const [{ cart, user }, dispatch] = useStateValue();
@@ -29,11 +28,7 @@ export default function NavigationBar() {
 
       <div className="flexbox-expand-space" />
 
-      {/* <SearchBar /> */}
-      <div className="header__search">
-        <input className="header__searchInput" type="text" />
-        <SearchIcon className="searchIcon" />
-      </div>
+      <SearchBar />
 
       <div className="header__nav">
         <Link className="header__option" to="/menu">
