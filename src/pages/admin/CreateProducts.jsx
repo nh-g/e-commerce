@@ -1,23 +1,18 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 // Project files
 import form from "../../utils/form.json";
 import FormItem from "../../shared/FormItem";
-import firestoreReference from "../../scripts/firebase/firebase";
 import { createDocument } from "../../scripts/firebase/fireStore";
 import ImageUploader from "./ImageUploader";
 
 export default function CreateProduct({ category, setToggler }) {
-
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const [price, setPrice] = useState("");
   const [imageURL, setImageURL] = useState("");
-
-  const newData = { title: title, description: description };
-  console.log(newData, imageURL);
-
 
   function onSubmit(event) {
       event.preventDefault();
@@ -33,6 +28,7 @@ export default function CreateProduct({ category, setToggler }) {
 
       createDocument("products", newProduct);
       setToggler(false);
+      window.location.reload(false); 
   }
 
   return (

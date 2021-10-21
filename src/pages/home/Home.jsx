@@ -14,7 +14,7 @@ export default function HomePage() {
     <div className="home">
       <div className="spacer intro" />
 
-      <div className="home__container">
+      {/* <div className="home__container">
 
         <div className="home__row">
           <MappingList getData={homeRow_1} Component={HomeProduct} />
@@ -26,7 +26,7 @@ export default function HomePage() {
           <MappingList getData={homeRow_3} Component={HomeProduct} />
         </div>
         
-      </div>
+      </div> */}
     </div>
     </>
   );

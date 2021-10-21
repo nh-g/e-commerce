@@ -4,7 +4,6 @@ import { useState } from "react";
 // Project files
 import form from "../../utils/form.json";
 import FormItem from "../../shared/FormItem";
-import firestoreReference from "../../scripts/firebase/firebase";
 import { createDocument } from "../../scripts/firebase/fireStore";
 import ImageUploader from "./ImageUploader";
 
@@ -31,6 +30,7 @@ export default function CreateCategory({ setToggler }) {
 
     onCreateCategory(newCategory);
     setToggler(false);
+    window.location.reload(false); 
   }
 
   return (
@@ -68,8 +68,6 @@ export default function CreateCategory({ setToggler }) {
           </div>
         </div>
       </form>
-      {/* Buttons */}
-      {/* Buttons */}
       <div className="admin-options">
         <button
           onClick={(event) => onSubmit(event)}
