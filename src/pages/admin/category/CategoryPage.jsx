@@ -40,7 +40,7 @@ export default function CategoryPage() {
                 toggler={toggler}
                 setToggler={setToggler}
               />
-              <ButtonEdit to={`edit-category/${categoryID}`} />
+              {/* <ButtonEdit to={`edit-category/${categoryID}`} /> */}
 
               <Delete path="categories" dataSelected={currentCategory} />
             </div>

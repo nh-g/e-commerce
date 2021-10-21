@@ -35,7 +35,7 @@ export default function ProductPage() {
           <Description product={product} />
           <h4>Ingredients:</h4>
           <Ingredients product={product} />
-          <Link to={`/${categoryID}`} className="btn btn-main btn-300">
+          <Link to={`/menu/${categoryID}`} className="btn btn-main btn-300">
             <ButtonBack label="Go back to Category" />
           </Link>
         </main>
