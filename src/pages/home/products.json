@@ -45,6 +45,7 @@
     "title": "Great Grand All you can eat BBQ",
     "price": "11.96",
     "rating": 0,
+    "ingredients": "steak veggie chicken seafood",
     "imagePath": "../assets/images/homeProducts/homeProducts/buffet.jpg"
   }
 ]
