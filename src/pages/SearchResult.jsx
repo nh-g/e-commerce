@@ -5,7 +5,6 @@ import { Link, useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import ButtonBack from "../shared/ButtonBack";
 import ProductCard from "./category/ProductCard";
-import { ArrowForward } from "@material-ui/icons";
 import arrow from "../assets/images/arrow-right-circle.svg";
 export default function SearchResult() {
   const { query } = useParams();

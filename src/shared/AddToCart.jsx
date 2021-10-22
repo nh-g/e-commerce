@@ -1,8 +1,9 @@
+// NPM packages
 import { useStateValue } from "../state/StateProvider";
 
 export default function AddToCart({item}) {
   // Properties
-  const { id, title, imageURL, price, rating, categoryID } = item;
+  const { id, title, imageURL, price, rating } = item;
   // Global State
   const [{ cart }, dispatch] = useStateValue();
 

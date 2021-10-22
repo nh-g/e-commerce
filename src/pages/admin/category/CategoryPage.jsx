@@ -1,6 +1,6 @@
 // NPM Packages
 import { useState } from "react";
-import { useParams, NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // Project files
 import useFetch from "../../../hooks/useFetch";

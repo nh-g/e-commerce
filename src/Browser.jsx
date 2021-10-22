@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navigation from "./shared/Navigation";
 import HomePage from "./pages/home/Home";
 import Menu from "./pages/menu/Menu";
-import Login from "./pages/login/Login";
 import Checkout from "./pages/checkout/Checkout";
 import Footer from "./shared/Footer";
 import AdminMenu from "./pages/admin/menu/Categories";
@@ -55,8 +54,6 @@ export default function Browser() {
           </Route>
 
           <Route exact path="/admin" component={AdminMenu} />
-
-          <Route path="/login" component={Login} />
 
           <Route path="/checkout" component={Checkout} />
 

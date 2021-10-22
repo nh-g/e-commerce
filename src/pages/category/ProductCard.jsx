@@ -8,7 +8,7 @@ import Ingredients from "../products/Ingredients";
 
 export default function ProductCard({ item }) {
   // Properties
-  const { id, title, imageURL, price, rating, categoryID } = item;
+  const { id, title, imageURL, price, categoryID } = item;
   const Image =
     imageURL === "" || imageURL === null || imageURL === undefined
       ? Placeholder

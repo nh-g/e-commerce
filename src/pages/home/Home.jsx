@@ -1,12 +1,10 @@
 import MappingList from "../../shared/MappingList.jsx";
-import homeProductData from "./products.json";
 import Hero from "./Hero.jsx";
 import HomeProduct from "../category/ProductCard";
 import useFetch from "../../hooks/useFetch.js";
 export default function HomePage() {
   const products = useFetch("products");
   const featuredProduct = getRandom(products.data, 6);
-
 
   function getRandom(array, length) {
     // safeguard
