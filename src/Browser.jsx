@@ -63,7 +63,7 @@ export default function Browser() {
         </div>
       </Switch>
 
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );
 }
