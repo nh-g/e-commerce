@@ -1,25 +1,21 @@
 
 .left-content img 
   width: 100%
-  // NEED REFACTOR
   object-fit: cover
-  max-height: 350px
-  margin-bottom: -1rem
   
 .right-content 
   display: flex
   flex-direction: column
   justify-content: space-evenly
-  padding: var(--space-medium)
+  padding: 24px
   align-items: center
   background: url("../../assets/images/seamless.png")
-  margin-bottom: 2rem
 
   h2
     margin: 0
   
 .masonry p 
-  justify-content: justify
+  text-align: center
   max-width: 430px
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif
   display: -webkit-box
@@ -27,18 +23,17 @@
   -webkit-box-orient: vertical
   overflow: hidden
 
-@media (min-width: $media-larger-mobile) 
+@media (min-width: $media-larger-phablet) 
   .masonry 
     display: grid
     grid-template-columns: 1fr 1fr
     text-decoration: none
     .right-content
-      margin-bottom: 0
 
   
-@media (min-width: 768px) 
+@media (min-width: $media-larger-tablet) 
   .masonry .right-content 
-    padding: var(--space-ultra)
+    padding: 48px
   
 
 /* Special case for the cards on monitors bigger than full HD */
