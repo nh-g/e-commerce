@@ -34,6 +34,8 @@
             border: none
             width: 100%
             border-radius: 0
+            &:hover
+                width: 200px
 
         .searchIcon 
             padding: 5px
@@ -66,6 +68,7 @@
             margin-left: 10px
             margin-right: 10px
             color: $white
+            align-self: center
 
 
 @media only screen and (max-width: 530px) 
@@ -93,7 +96,12 @@
 
 @media only screen and (max-width: 400px) 
     #navigation-bar
-        font-size: 13px
+        h1
+            font-size: 11px
+
+        .header__option
+            font-size: 11px
+
     .header__optionLineOne 
         font-size: 9px
         
@@ -101,6 +109,13 @@
     .header__optionLineTwo 
         font-size: 9px
 
+@media only screen and (max-width: 530px) 
+    #navigation-bar
+        h1
+            font-size: 11px
+
+        .header__option
+            font-size: 11px
 
 
 
