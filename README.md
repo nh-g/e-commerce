@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Ecommerce CRUD operation BBQ-themed Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+[![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
+[![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
+[![MIT](https://camo.githubusercontent.com/3dbcfa4997505c80ef928681b291d33ecfac2dabf563eb742bb3e269a5af909c/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f496c65726961796f2f6d61726b646f776e2d6261646765733f7374796c653d666f722d7468652d6261646765)](https://professionalprograms.mit.edu/?utm_source=google&utm_medium=cpc&utm_campaign=MIT_BRAND_PROTECTION&utm_medium=ppc&utm_term=massachusetts%20institute%20of%20technology%20mit&utm_campaign=MIT_BRAND_PROTECTION&utm_source=adwords&hsa_mt=e&hsa_src=g&hsa_tgt=kwd-325879874370&hsa_acc=2660252290&hsa_ad=406000382319&hsa_cam=8546883354&hsa_kw=massachusetts%20institute%20of%20technology%20mit&hsa_net=adwords&hsa_ver=3&hsa_grp=85551586934&gclid=CjwKCAjwr56IBhAvEiwA1fuqGvMJK9N0hVJ40ns4Qil_4byBgG-0AKpD5gEImBRlcJ1cmbHUsDzoohoCMK4QAvD_BwE)
 
-In the project directory, you can run:
+This project was bootstrapped with Create React App.
 
-### `npm start`
+## 1. Content
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This is a BBQ Restaurant website.
+[Go to website](https://ecommerce-giang.web.app/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 2. Setup
 
-### `npm test`
+These are the instructions to run the project:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Open the terminal and navigate to the folder where this readme file is located.
+2. Install dependencies:
+   `npm install`
+3. run the project:
+   `npm start`
+4. Open a browser at : `http://localhost:3000`
 
-### `npm run build`
+## 3. Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Firebase Hosting
+- Firebase Firestore DB
+- Firebase Cloud Storage
+- Leaflet map
+- Emailjs
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 4. Project organization
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4.1 Requirement gathering
 
-### `npm run eject`
+[Google Docs link](https://docs.google.com/document/d/1h90vFZMO0jB8CJ2ES9QWqTnoDWv43eQcifb-yyo3ntw/edit
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 4.2 Project spreadsheet
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Google Spreadsheets link](https://docs.google.com/spreadsheets/d/14pENvmUuPCur8fB6i02V9kPC5d8R5IoSuirlKrN7RPc/edit#gid=722109281)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 4.3 Users flow chart
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Whimsical Chart](https://whimsical.com/e-commerce-PZoKE1z5gdPy8Nge9BecpT@7YNFXnKbYpNPxAFg9pZz2)
 
-## Learn More
+### 4.4 Component tree
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Whimsical Component Tree](https://whimsical.com/e-commerce-PZoKE1z5gdPy8Nge9BecpT@7YNFXnKbYmdLeTywUS5D4)
