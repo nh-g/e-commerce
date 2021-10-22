@@ -1,4 +1,3 @@
-
 .left-content img 
   width: 100%
   object-fit: cover
@@ -22,6 +21,15 @@
   -webkit-line-clamp: 4
   -webkit-box-orient: vertical
   overflow: hidden
+
+@media (max-width: $media-larger-phablet) 
+  .left-content img 
+    margin-bottom: -1rem
+  .masonry p 
+    margin-bottom: 2rem
+
+
+
 
 @media (min-width: $media-larger-phablet) 
   .masonry 
