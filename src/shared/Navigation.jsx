@@ -21,7 +21,7 @@ export default function NavigationBar() {
     <nav id="navigation-bar">
       <Link exact to="/">
         <h1 className="header__logo">
-          <img src={flameIcon} alt="" style={{ height: "30px" }} />
+          <img src={flameIcon} alt="" />
           Fireup
         </h1>
       </Link>
