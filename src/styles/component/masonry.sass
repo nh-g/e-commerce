@@ -1,6 +1,7 @@
 .left-content img 
   width: 100%
   object-fit: cover
+
   
 .right-content 
   display: flex
@@ -25,18 +26,20 @@
 @media (max-width: $media-larger-phablet) 
   .left-content img 
     margin-bottom: -1rem
+
   .masonry p 
     margin-bottom: 2rem
 
 
-
-
 @media (min-width: $media-larger-phablet) 
   .masonry 
-    height: 350px
+    min-height: 350px
     display: grid
     grid-template-columns: 1fr 1fr
     text-decoration: none
+
+  .left-content img 
+    margin-bottom: -1rem
 
   
 @media (min-width: $media-larger-tablet) 

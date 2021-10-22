@@ -1,12 +1,11 @@
-import ImageLoader from "../../shared/ImageLoader";
+import ownerImage from '../../assets/images/brand/owner.jpeg'
 import Map from "./Map";
 import ContactForm from "./ContactForm";
 
 export default function ContactPage() {
-    const ownerImageURL = "/owner.jpeg"
     return (
       <div className="contact-page">
-        <ImageLoader filePath={ownerImageURL} />
+        <img src={ownerImage} alt="" />
 
         <div className="opening">
           <h2>Opening Hours</h2>

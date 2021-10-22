@@ -6,6 +6,7 @@ import Navigation from "./shared/Navigation";
 import HomePage from "./pages/home/Home";
 import Menu from "./pages/menu/Menu";
 import Checkout from "./pages/checkout/Checkout";
+import Footer from "./shared/Footer";
 import AdminMenu from "./pages/admin/menu/Categories";
 import AdminCategoryPage from "./pages/admin/category/CategoryPage";
 import CategoryPage from "./pages/category/CategoryPage";
@@ -61,6 +62,7 @@ export default function Browser() {
           <Route path="/results/:query" component={SearchResult} />
         </div>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
