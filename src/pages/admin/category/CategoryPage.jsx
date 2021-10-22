@@ -40,9 +40,8 @@ export default function CategoryPage() {
                 toggler={toggler}
                 setToggler={setToggler}
               />
-              <ButtonEdit to={`/edit-category/${categoryID}`} />
-
-              <Delete path="categories" dataSelected={currentCategory} />
+                <ButtonEdit to={`/edit-category/${categoryID}`} />
+                <Delete path="categories" dataSelected={currentCategory} />
             </div>
 
             <h1>{currentCategory.title}</h1>
@@ -57,7 +56,7 @@ export default function CategoryPage() {
 
           <Products category={currentCategory} />
 
-            <ButtonBack label="Go back to Menu" />
+          <ButtonBack label="Go back to Menu" />
         </main>
       )}
     </>

@@ -29,7 +29,7 @@ export default function ProductPage() {
       {products.loading === true && <Spinner />}
       {products.error !== null && <BoxError />}
       {!products.loading && products.error === null && (
-        <main className="page">
+        <main className="page product-page">
           <section className="page-hero">
             <h1>{product.title}</h1>
             <small>{product.description}</small>
