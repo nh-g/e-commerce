@@ -19,7 +19,9 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2",
     "leaflet": "^1.7.1",
-    "react-leaflet": "^2.7.0"
+    "react-leaflet": "^2.7.0",
+    "animate.css": "^4.1.1",
+    "cleave.js": "^1.6.0"
   },
   "scripts": {
     "start": "react-scripts start",

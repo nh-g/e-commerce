@@ -31,7 +31,7 @@ export default function Subtotal() {
         prefix={"$"}
       />
 
-      <button onClick={(e) => history.push("/checkout")}>
+      <button onClick={(e) => history.push("/payment")}>
         Proceed to Checkout
       </button>
     </div>

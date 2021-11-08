@@ -18,6 +18,7 @@ import AdminProductPage from "./pages/admin/product/ProductPage";
 import ContactPage from "./pages/contact/Contact";
 import SearchResult from "./pages/SearchResult";
 import Login from "./pages/login/Login";
+import Payment from "./pages/payment/Payment";
 
 export default function Browser() {
   return (
@@ -64,8 +65,11 @@ export default function Browser() {
 
           <Route path="/contact" component={ContactPage} />
 
+          <Route path="/payment" component={Payment} />
+
           <Route path="/results/:query" component={SearchResult} />
         </div>
+
       </Switch>
       <Footer />
     </BrowserRouter>
