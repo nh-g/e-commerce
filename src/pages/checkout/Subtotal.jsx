@@ -5,14 +5,14 @@ import CurrencyFormat from "react-currency-format";
 // Project files
 import { useStateValue } from "../../state/StateProvider";
 import { getCartTotal } from "../../state/reducer";
-import { CardActions } from "@material-ui/core";
+import "./Subtotal.css";
 
 export default function Subtotal() {
 
   const history = useHistory();
 
   // Global state
-  const [{ cart }, dispatch] = useStateValue();
+  const [{ cart }] = useStateValue();
 
   return (
     <div className="subtotal">
@@ -20,7 +20,7 @@ export default function Subtotal() {
         renderText={(value) => (
           <>
             <p>
-              Subtotal ({CardActions.length} items): <strong>{value}</strong>
+              Subtotal ({cart.length} items): <strong>{value}</strong>
             </p>
             <small className="subtotal__gift">
               <input type="checkbox" /> This order contains a gift

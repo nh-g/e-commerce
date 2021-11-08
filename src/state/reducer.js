@@ -28,10 +28,6 @@ function addItem(state, action) {
   if (item !== null) return { ...state, cart: [...state.cart, item] }; // return object
 }
 
-export function getCartTotal(cart) {
-  cart?.reduce((amount, item) => item.price + amount, 0);
-}
-
 function removeFromCart(state, action) {
   const index = state.cart.findIndex((item) => item.id === action.id);
   let newCart = [...state.cart];
@@ -45,3 +41,7 @@ function removeFromCart(state, action) {
 
   return { ...state, cart: newCart };
 }
+
+// Subtotal
+export const getCartTotal = (cart) =>
+  cart?.reduce((amount, item) => item.price + amount, 0);

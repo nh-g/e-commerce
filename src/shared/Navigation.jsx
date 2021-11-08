@@ -10,7 +10,7 @@ import { authentication } from "../scripts/firebase/authentication-firebase";
 import SearchBar from './SearchBar';
 export default function NavigationBar() {
   // Global state
-  const [{ cart, user }, dispatch] = useStateValue();
+  const [{ cart, user }] = useStateValue();
   const handleAuthentication = () => {
     if (user) {
       signOut(authentication);

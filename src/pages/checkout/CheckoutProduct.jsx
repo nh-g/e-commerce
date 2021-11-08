@@ -1,8 +1,9 @@
 // Project files
 import { useStateValue } from "../../state/StateProvider";
+import "./CheckoutProduct.css";
 
 export default function CheckoutProduct({ item }) {
-  const { id, imageURL, title, price, rating, hideButton } = item;
+  const { id, imageURL, title, price, hideButton } = item;
   // Global state
   const [{ cart }, dispatch] = useStateValue();
 
