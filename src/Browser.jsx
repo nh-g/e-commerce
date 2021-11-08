@@ -17,6 +17,7 @@ import FormCategoryEditor from "./pages/admin/FormCategoryEditor";
 import AdminProductPage from "./pages/admin/product/ProductPage";
 import ContactPage from "./pages/contact/Contact";
 import SearchResult from "./pages/SearchResult";
+import Login from "./pages/login/Login";
 
 export default function Browser() {
   return (
@@ -56,6 +57,10 @@ export default function Browser() {
           <Route exact path="/admin" component={AdminMenu} />
 
           <Route path="/checkout" component={Checkout} />
+
+          <Route path="/login">
+            <Login />
+          </Route>
 
           <Route path="/contact" component={ContactPage} />
 
