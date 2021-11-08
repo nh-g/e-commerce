@@ -12,8 +12,6 @@ export default function SearchResult() {
   const products = useFetch("products");
   const data = products.data;
 
-  // const filterByTitle = filterList(data, "title", query);
-
   const filterByDescription = filterList(data, "description", query);
 
   function filterList(array, key, query) {
