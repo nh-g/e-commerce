@@ -18,7 +18,7 @@ export default function ProductCard({ item }) {
 
   return (
     <div className="product">
-      <Link to={`./${categoryID}/${id}`}>
+      <Link to={`/menu/${categoryID}/${id}`}>
         <div className="product__info">
           <p>{title}</p>
           <p className="product__price">
