@@ -24,6 +24,7 @@ export default function Footer() {
           </a>
         </li>
       </ul>
+      <br />
       <p>© 2021 • Giang N.H. All copyrights served</p>
     </footer>
   );

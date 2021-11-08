@@ -8,6 +8,7 @@ import flameIcon from "../assets/images/brand/flame.svg";
 import { useStateValue } from "../state/StateProvider";
 import { authentication } from "../scripts/firebase/authentication-firebase";
 import SearchBar from './SearchBar';
+
 export default function NavigationBar() {
   // Global state
   const [{ cart, user }] = useStateValue();
@@ -36,9 +37,9 @@ export default function NavigationBar() {
           {/* <img src={flameIcon} alt="" style={{ height: "10px" }} /> */}
         </Link>
 
-        <Link className="header__option" to="/admin">
+        {/* <Link className="header__option" to="/admin">
           Admin
-        </Link>
+        </Link> */}
         <Link className="header__option" to="/contact">
           Contact
         </Link>
